@@ -13,7 +13,6 @@ import {
 import { useState } from "react";
 import AppMobileNavbar from "./AppMobileNavbar";
 
-
 export function NavbarDemo() {
   const navItems = [
     {
@@ -34,9 +33,9 @@ export function NavbarDemo() {
 
   return (
     <div className="relative w-full">
-      <Navbar >
+      <Navbar>
         {/* Desktop Navigation */}
-        <NavBody >
+        <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
@@ -45,15 +44,12 @@ export function NavbarDemo() {
           </div>
         </NavBody>
 
-       
-
         
       </Navbar>
-      <div className="md:hidden">
-        <AppMobileNavbar />
-      </div>
+
       <DummyContent />
       {/* Navbar */}
+      
     </div>
   );
 }
@@ -145,7 +141,8 @@ const DummyContent = () => {
         ].map((box) => (
           <div
             key={box.id}
-            className={`${box.width} ${box.height} ${box.bg} flex items-center justify-center rounded-lg p-4 shadow-sm`}>
+            className={`${box.width} ${box.height} ${box.bg} flex items-center justify-center rounded-lg p-4 shadow-sm`}
+          >
             <h2 className="text-xl font-medium">{box.title}</h2>
           </div>
         ))}
