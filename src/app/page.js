@@ -1,14 +1,12 @@
-import AppMobileNavbar from "@/components/common/AppMobileNavbar";
-import { NavbarDemo } from "@/components/common/AppNavbar";
-import Image from "next/image";
+import VillaHeroCarousel from "@/components/home/Hero";
+
+
 
 export default function Home() {
   return (
     <>
-    <div className="md:hidden sticky top-0 z-1000">
-          <AppMobileNavbar />
-        </div>
-    <NavbarDemo />
+    <VillaHeroCarousel />
+    <div className="h-screen bg-indigo-400" />
     </>
   );
 }

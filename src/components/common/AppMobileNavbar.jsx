@@ -4,19 +4,19 @@ import { useState } from 'react'
 
 const navItems = [
   {
-    label: '_home',
+    label: 'home',
     href: '#',
   },
   {
-    label: '_projects',
+    label: 'projects',
     href: '#projects',
   },
   {
-    label: '_services',
+    label: 'services',
     href: '#services',
   },
   {
-    label: '_contact-me',
+    label: 'contact-me',
     href: '#contact',
   },
 ]
@@ -29,10 +29,10 @@ const AppMobileNavbar = () => {
   }
 
   return (
-    <nav className="h-16 w-full overflow-hidden border-b border-[#2B3E6E] bg-[#011627]">
+    <nav className=" h-16 w-full overflow-hidden border-b border-[#2B3E6E] bg-secondary/10">
       <div className="mx-auto flex h-full w-full max-w-[1200px] items-center justify-between px-4 py-1">
         {isVisible ? (
-          <span className="text-[#607b96] md:hidden">_menu</span>
+          <span className="text-[#607b96] md:hidden">Menu</span>
         ) : (
           <div className="animate-fade-up relative flex items-center gap-3 transition-all duration-300 md:static">
             {/* logo */}
@@ -43,7 +43,7 @@ const AppMobileNavbar = () => {
                 alt="Logo"
               />
             </a>
-            <span className="text-[#607b96]">john_doe</span>
+            <span className="text-[#607b96]">BookAStay</span>
           </div>
         )}
 
@@ -58,7 +58,7 @@ const AppMobileNavbar = () => {
         </div>
 
         <ul
-          className={`${isVisible ? 'flex' : 'hidden'} animate-fade-in absolute top-16 left-0 z-10 h-screen w-full flex-col bg-[#011627] md:static md:top-0 md:flex md:h-full md:w-[72%] md:flex-row lg:w-[65%]`}
+          className={`${isVisible ? 'flex' : 'hidden'} animate-fade-in absolute top-16 left-0 z-10 h-screen w-full flex-col bg-primary md:static md:top-0 md:flex md:h-full md:w-[72%] md:flex-row lg:w-[65%]`}
         >
           {navItems.map((item) => (
             <li
@@ -67,7 +67,7 @@ const AppMobileNavbar = () => {
             >
               <a
                 href={item.href}
-                className="w-full py-7 text-[#607b96] transition-all duration-150 hover:text-white md:py-0"
+                className="w-full py-7 text-primary-foreground transition-all duration-150 hover:text-white md:py-0"
               >
                 {item.label}
               </a>
