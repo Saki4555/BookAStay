@@ -55,11 +55,11 @@ export default function FeaturedProperties() {
           {properties.map((property, idx) => (
             <motion.article
               key={property.id}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className={`group relative overflow-hidden rounded-md bg-card hover:shadow-2xl transition-all duration-500 ${
+              className={`group relative overflow-hidden rounded-md bg-card hover:shadow-2xl transition-shadow duration-500 ${
                 idx === 0 ? 'md:col-span-2 row-span-1' : ''
               } ${
                 idx === 1 ? 'md:col-span-1 row-span-1' : ''
