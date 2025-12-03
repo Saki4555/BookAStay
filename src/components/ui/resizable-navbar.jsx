@@ -56,7 +56,7 @@ export const NavBody = ({
           ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
           : "none",
         width: visible ? "80%" : "100%",
-        y: visible ? 20 : 0,
+        y: visible ? 5 : 0,
       }}
       transition={{
         type: "spring",
@@ -68,7 +68,7 @@ export const NavBody = ({
       }}
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-md bg-secondary/10 px-4 py-2 md:flex ",
-        visible && "bg-transparent",
+        visible && "bg-secondary/50",
         className
       )}>
       {children}

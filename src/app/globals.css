@@ -57,7 +57,7 @@
   --popover-foreground: var(--card-foreground);
 
   /* INTERACTIVE/ACCENT COLORS - SWAPPED FOR DESIGN INTENT */
-  --primary: #5d8787; /* NEW PRIMARY: Background for main CTA (Muted Blue-Gray) */
+  --primary: #62baea; /* NEW PRIMARY: Background for main CTA (Muted Blue-Gray) */
   --primary-foreground: #FAFAFA; /* NEW PRIMARY FOREGROUND: Dark Text on CTA */
   
   --secondary: #343434; /* NEW SECONDARY: Used for dark/less frequent elements (Dark Charcoal) */

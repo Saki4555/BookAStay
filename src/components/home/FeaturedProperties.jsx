@@ -1,159 +1,134 @@
-'use client'
+"use client";
 
-import { motion } from 'motion/react'
+import { motion } from "motion/react";
 
-const properties = [
-  { id: 1, title: 'Cozy Beachside Cottage', location: 'Old Pier', price: '€65/night', beds: 2, guests: 4, img: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=80' },
-  { id: 2, title: 'Modern Downtown Loft', location: 'City Center', price: '€95/night', beds: 3, guests: 6, img: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=80' },
-  { id: 3, title: 'Mountain View Cabin', location: 'Highland Ridge', price: '€80/night', beds: 2, guests: 4, img: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=80' },
-  { id: 4, title: 'Luxury Seaside Villa', location: 'Costa Blanca', price: '€150/night', beds: 4, guests: 8, img: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=80' },
-]
+const collections = [
+  {
+    id: 1,
+    title: "Waterfront Estates",
+    subtitle: "COASTAL LIVING",
+    img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80",
+    // ACTION: Updated to link to a lead-generating page
+    href: "/contact", 
+  },
+  {
+    id: 2,
+    title: "Urban Penthouses",
+    subtitle: "CITY CENTER",
+    img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80",
+    href: "/contact", 
+  },
+  {
+    id: 3,
+    title: "Modern Retreats",
+    subtitle: "ARCHITECTURE",
+    img: "https://images.unsplash.com/photo-1600596542815-e32c2159f828?w=1920&q=80",
+    href: "/our-services", // You can vary this to hit your main service page
+  },
+  {
+    id: 4,
+    title: "Historic Manors",
+    subtitle: "CLASSIC DESIGN",
+    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80",
+    href: "/contact", 
+  },
+];
 
-export default function FeaturedProperties() {
+export default function FeaturedCollections() {
   return (
-    <section className="py-20 mt-32 px-6 md:px-12 lg:px-24 bg-background">
+    <section className="py-24 px-6 md:px-12 lg:px-24 bg-background text-foreground">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
-          <div>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-primary font-medium mb-2 tracking-wide uppercase text-sm"
-            >
-              Discover Your Next Stay
-            </motion.p>
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl font-bold text-foreground"
-            >
-              Featured Properties
-            </motion.h2>
-          </div>
-          <motion.a 
+        {/* Header (No Changes Needed) */}
+        <div className="mb-16 text-center max-w-2xl mx-auto">
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            href="/properties" 
-            className="group inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors font-medium"
+            transition={{ duration: 0.5 }}
+            className="text-4xl md:text-5xl font-bold text-foreground mb-4"
           >
-            View All Properties
-            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </motion.a>
+            Curated Collections
+          </motion.h2>
+          
+          <motion.div 
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="h-1 w-24 bg-primary mx-auto mb-6"
+          />
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-muted-foreground text-lg"
+          >
+            Explore our exclusive portfolio of hand-picked properties, designed for the discerning client.
+          </motion.p>
         </div>
 
-        {/* Custom Asymmetric Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[400px]">
-          {properties.map((property, idx) => (
-            <motion.article
-              key={property.id}
+        {/* The Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 auto-rows-[400px]">
+          {collections.map((item, idx) => (
+            <motion.div
+              key={item.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className={`group relative overflow-hidden rounded-md bg-card hover:shadow-2xl transition-shadow duration-500 ${
-                idx === 0 ? 'md:col-span-2 row-span-1' : ''
-              } ${
-                idx === 1 ? 'md:col-span-1 row-span-1' : ''
-              } ${
-                idx === 2 ? 'md:col-span-1 row-span-1' : ''
-              } ${
-                idx === 3 ? 'md:col-span-2 row-span-1' : ''
-              }`}
+              className={`group relative overflow-hidden rounded-xl bg-secondary cursor-pointer ${
+                idx === 0 ? "md:col-span-2 row-span-1" : ""
+              } ${idx === 1 ? "md:col-span-1 row-span-1" : ""} ${
+                idx === 2 ? "md:col-span-1 row-span-1" : ""
+              } ${idx === 3 ? "md:col-span-2 row-span-1" : ""}`}
             >
-              {/* Image Container */}
-              <div className="relative w-full h-full overflow-hidden">
-                <img
-                  src={property.img} 
-                  alt={property.title}  
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                />
-                
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
-                
-                {/* Favorite Button */}
-                <button className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all duration-300">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Content Overlay */}
-              <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-8">
-                {/* Top Badge */}
-                <div>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-full text-sm font-semibold text-foreground shadow-lg">
-                    <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                    </svg>
-                    Featured
-                  </span>
-                </div>
-
-                {/* Bottom Content */}
-                <div className="space-y-4">
-                  {/* Location */}
-                  <div className="flex items-center gap-2 text-white/90">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span className="text-sm font-medium">{property.location}</span>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold text-white leading-tight">
-                    {property.title}
-                  </h3>
+              {/* WRAPPED ENTIRE CARD CONTENT IN A TAG */}
+              <a href={item.href} className="absolute inset-0 w-full h-full">
+                <div className="absolute inset-0 w-full h-full">
+                  {/* Image */}
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-[1.5s] ease-in-out group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                  />
                   
-                  {/* Property Details */}
-                  <div className="flex items-center gap-4 text-sm text-white/90">
-                    <span className="flex items-center gap-1.5">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                      </svg>
-                      {property.beds} Beds
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-secondary/20 group-hover:bg-secondary/40 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent opacity-90" />
+                </div>
+
+                {/* Text Content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-10">
+                  
+                  {/* Subtitle */}
+                  <div className="flex items-center gap-4 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">
+                    <span className="h-px w-8 bg-secondary-foreground/60"></span>
+                    <span className="text-xs font-bold tracking-[0.2em] text-secondary-foreground/90 uppercase">
+                      {item.subtitle}
                     </span>
-                    <span className="flex items-center gap-1.5">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                      </svg>
-                      {property.guests} Guests
-                    </span>
+                    <span className="h-px w-8 bg-secondary-foreground/60"></span>
                   </div>
 
-                  {/* Price and CTA */}
-                  <div className="flex items-center justify-between pt-4 border-t border-white/20">
-                    <div>
-                      <p className="text-white/70 text-xs mb-1">Starting from</p>
-                      <p className="text-3xl font-bold text-white">{property.price}</p>
-                    </div>
-                    <a 
-                      href={`/properties/${property.id}`}
-                      className="group/btn flex items-center justify-center w-14 h-14 bg-primary rounded-full hover:w-auto hover:px-6 transition-all duration-300 overflow-hidden"
-                    >
-                      <span className="hidden group-hover/btn:inline-block text-primary-foreground font-semibold mr-2 whitespace-nowrap">Book Now</span>
-                      <svg className="w-6 h-6 text-primary-foreground group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </a>
+                  {/* Main Title */}
+                  <h3 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-2 tracking-tight group-hover:-translate-y-2 transition-transform duration-500">
+                    {item.title}
+                  </h3>
+
+                  {/* Button */}
+                  <div className="mt-6 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                    <span className="px-6 py-2 border border-secondary-foreground/30 text-secondary-foreground text-sm font-medium tracking-wide rounded-full transition-all duration-300
+                      hover:bg-primary hover:border-primary hover:text-primary-foreground">
+                      Contact for Details
+                    </span>
                   </div>
                 </div>
-              </div>
-            </motion.article>
+              </a>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -5,27 +5,15 @@ import {
   NavItems,
 
   NavbarLogo,
-  NavbarButton,
+ 
 
 } from "@/components/ui/resizable-navbar";
-import { useState } from "react";
+import { NAV_ITEMS } from "@/lib/constants";
+
 
 
 export default function AppDesktopNavbar() {
-  const navItems = [
-    {
-      name: "Features",
-      link: "#features",
-    },
-    {
-      name: "Pricing",
-      link: "#pricing",
-    },
-    {
-      name: "Contact",
-      link: "#contact",
-    },
-  ];
+
 
 
 
@@ -35,7 +23,7 @@ export default function AppDesktopNavbar() {
         {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
-          <NavItems items={navItems} />
+          <NavItems items={NAV_ITEMS} />
         
         </NavBody>
 
