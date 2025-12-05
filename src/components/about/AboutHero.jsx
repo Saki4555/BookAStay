@@ -10,7 +10,7 @@ const AboutHero = () => {
     <section className="relative h-[65vh] md:h-[75vh] w-full overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1505692794409-7b7113a6b2a3?auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80"
           alt="Boutique vacation rental agency team and modern property exterior"
           className="w-full h-full object-cover brightness-90"
         />

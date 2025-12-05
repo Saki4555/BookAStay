@@ -87,11 +87,11 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.slice(0, 4).map((h, idx) => (
             <motion.div
               key={h.id}
-              className="group flex flex-col bg-card p-10 hover:shadow-2xl transition-shadow duration-300"
+              className="group flex rounded-lg flex-col bg-card p-10 hover:shadow-2xl transition-shadow duration-300"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -103,7 +103,7 @@ export default function WhyChooseUs() {
               }}
             >
               {/* Icon - positioned at top */}
-              <div className="w-24 h-24 flex items-center justify-center bg-primary/80 text-white mb-8">
+              <div className="w-24 rounded-lg h-24 flex items-center justify-center bg-primary/80 text-white mb-8">
                 {h.icon}
               </div>
 

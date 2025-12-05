@@ -1,138 +1,378 @@
 "use client";
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { IconPhone, IconMail, IconMapPin } from '@tabler/icons-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   function onSubmit(e) {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setTimeout(() => {
+      setSubmitted(true);
+      setIsSubmitting(false);
+    }, 1000);
   }
 
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: "Call Us",
+      detail: "+1 (805) 555-0123",
+      subDetail: "Mon-Fri, 9AM-6PM PST",
+      link: "tel:+18055550123",
+    },
+    {
+      icon: Mail,
+      title: "Email Us",
+      detail: "hello@bluecoastvacations.com",
+      subDetail: "We respond within 24 hours",
+      link: "mailto:hello@bluecoastvacations.com",
+    },
+    {
+      icon: MapPin,
+      title: "Visit Us",
+      detail: "123 Seaside Avenue",
+      subDetail: "Santa Barbara, CA 93101",
+      link: "https://maps.google.com/?q=Santa+Barbara+CA",
+    },
+  ];
+
   return (
-    <main className="bg-background text-foreground">
-      {/* Hero Section */}
+    <main className="bg-background text-foreground min-h-screen">
+     
+
+
+      {/* //! hero section 2 */}
       <section className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1520975698512-4d2b3f3c1b2f?auto=format&fit=crop&w=1600&q=80" alt="Modern office environment for contact call to action" className="w-full h-full object-cover" />
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80"
+            alt="Hotel managers and property maintenance team"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
           <div className="absolute inset-0 bg-secondary/70" />
         </div>
 
         <div className="relative h-full max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
           <div className="flex flex-col justify-center h-full max-w-3xl">
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               <div className="flex items-center gap-3 mb-6">
                 <span className="h-px w-12 bg-primary" />
-                <span className="text-primary text-sm font-semibold tracking-wider uppercase">Contact</span>
+                <span className="text-primary text-sm font-semibold tracking-wider uppercase">
+                  Let&apos;s Connect
+                </span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-secondary-foreground mb-6 leading-tight">Get In Touch</h1>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-secondary-foreground mb-6 leading-tight">
+                Get In Touch
+              </h1>
 
-              <p className="text-lg md:text-xl text-secondary-foreground/90 leading-relaxed max-w-2xl">We would love to discuss your vacation rental needs — get a tailored plan to optimize listings, guest experience, and revenue.</p>
+              <p className="text-lg md:text-xl text-secondary-foreground/90 leading-relaxed max-w-2xl">
+                Ready to transform your vacation rental business? Let&apos;s discuss
+                how we can maximize your property&apos;s potential.
+              </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24 bg-background">
-        <div className="max-w-7xl mx-auto grid gap-8 grid-cols-1 lg:grid-cols-2 items-start">
-          <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <Card className="bg-card p-8 md:p-12 rounded-lg shadow-lg">
-              <form onSubmit={onSubmit} className="space-y-4">
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">Full name</label>
-                  <input name="name" value={form.name} onChange={onChange} required className="w-full px-4 py-3 border border-input rounded focus:outline-none focus:ring-2 focus:ring-ring bg-background" />
-                </div>
-
-                <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">Email</label>
-                    <input name="email" type="email" value={form.email} onChange={onChange} required className="w-full px-4 py-3 border border-input rounded focus:outline-none focus:ring-2 focus:ring-ring bg-background" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">Phone</label>
-                    <input name="phone" value={form.phone} onChange={onChange} className="w-full px-4 py-3 border border-input rounded focus:outline-none focus:ring-2 focus:ring-ring bg-background" />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">Subject</label>
-                  <input name="subject" value={form.subject} onChange={onChange} className="w-full px-4 py-3 border border-input rounded focus:outline-none focus:ring-2 focus:ring-ring bg-background" />
-                </div>
-
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">Message</label>
-                  <textarea name="message" rows={6} value={form.message} onChange={onChange} required className="w-full px-4 py-3 border border-input rounded focus:outline-none focus:ring-2 focus:ring-ring bg-background" />
-                </div>
-
-                <div>
-                  <Button type="submit" className="w-fit">Send Message</Button>
-                </div>
-
-                {submitted && <div className="text-sm text-primary mt-2">Thank you! We will reach out to you shortly.</div>}
-              </form>
+      {/* Main Content Section */}
+      <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24 bg-background">
+        <div className="max-w-7xl mx-auto">
+          {/* Contact Info Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <Card className="bg-card p-8 md:p-10 rounded-2xl border-2 border-border shadow-lg">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                {contactInfo.map((info, idx) => (
+                  <motion.a
+                    key={idx}
+                    href={info.link}
+                    target={info.link.startsWith("http") ? "_blank" : undefined}
+                    rel={
+                      info.link.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    className="group flex flex-col items-center text-center space-y-3"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  >
+                    <div className="bg-primary/10 text-primary p-3 rounded-xl group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
+                      <info.icon className="w-5 h-5" strokeWidth={2} />
+                    </div>
+                    <div>
+                      <div className="font-bold text-base mb-1 text-foreground group-hover:text-primary transition-colors">
+                        {info.title}
+                      </div>
+                      <div className="text-foreground font-medium text-sm mb-0.5">
+                        {info.detail}
+                      </div>
+                      <div className="text-muted-foreground text-xs">
+                        {info.subDetail}
+                      </div>
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
             </Card>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.06 }}>
-            <div className="space-y-6">
-              <div className="bg-muted/50 p-6 rounded-lg">
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary text-primary-foreground p-3 rounded-md">
-                    <IconPhone />
+          {/* Form and Map Section */}
+          <div className="grid gap-12 grid-cols-1 lg:grid-cols-5 items-start">
+            {/* Contact Form */}
+            <motion.div
+              className="lg:col-span-3"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <div className="mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  Send us a message
+                </h2>
+                <p className="text-muted-foreground text-lg">
+                  Fill out the form below and we&apos;ll get back to you within 24
+                  hours.
+                </p>
+              </div>
+
+              <Card className="bg-card p-8 md:p-10 rounded-2xl shadow-xl border-2 border-border">
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-base font-semibold">
+                      Full Name *
+                    </Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={form.name}
+                      onChange={onChange}
+                      required
+                      placeholder="John Doe"
+                      className="h-12 text-base"
+                    />
                   </div>
-                  <div>
-                    <div className="font-semibold">Call Us</div>
-                    <div className="text-muted-foreground text-sm">+1 (555) 123-4567</div>
+
+                  <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+                    <div className="space-y-2">
+                      <Label
+                        htmlFor="email"
+                        className="text-base font-semibold"
+                      >
+                        Email Address *
+                      </Label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={form.email}
+                        onChange={onChange}
+                        required
+                        placeholder="john@example.com"
+                        className="h-12 text-base"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label
+                        htmlFor="phone"
+                        className="text-base font-semibold"
+                      >
+                        Phone Number
+                      </Label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        value={form.phone}
+                        onChange={onChange}
+                        placeholder="+1 (555) 000-0000"
+                        className="h-12 text-base"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label
+                      htmlFor="subject"
+                      className="text-base font-semibold"
+                    >
+                      Subject
+                    </Label>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      value={form.subject}
+                      onChange={onChange}
+                      placeholder="How can we help you?"
+                      className="h-12 text-base"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label
+                      htmlFor="message"
+                      className="text-base font-semibold"
+                    >
+                      Your Message *
+                    </Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      rows={6}
+                      value={form.message}
+                      onChange={onChange}
+                      required
+                      placeholder="Tell us about your vacation rental property and goals..."
+                      className="text-base resize-none"
+                    />
+                  </div>
+
+                  <div className="pt-2">
+                    <Button
+                      type="submit"
+                      size="lg"
+                      disabled={isSubmitting || submitted}
+                      className="w-full md:w-auto px-8 h-12 text-base font-semibold group"
+                    >
+                      {isSubmitting ? (
+                        <>Processing...</>
+                      ) : submitted ? (
+                        <>Message Sent!</>
+                      ) : (
+                        <>
+                          Send Message
+                          <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </>
+                      )}
+                    </Button>
+                  </div>
+
+                  {submitted && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="bg-primary/10 border-2 border-primary/30 text-primary px-6 py-4 rounded-xl"
+                    >
+                      <p className="font-semibold">
+                        ✓ Thank you for reaching out!
+                      </p>
+                      <p className="text-sm mt-1 text-primary/80">
+                        We&apos;ve received your message and will respond within 24
+                        hours.
+                      </p>
+                    </motion.div>
+                  )}
+                </div>
+              </Card>
+            </motion.div>
+
+            {/* Sidebar - Business Hours & Map */}
+            <motion.div
+              className="lg:col-span-2 space-y-8"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+            >
+              {/* Business Hours Card */}
+              <Card className="bg-card p-8 rounded-2xl border-2 border-border shadow-lg">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="bg-primary/10 text-primary p-3 rounded-xl">
+                    <Clock className="w-6 h-6" strokeWidth={2} />
+                  </div>
+                  <h3 className="font-bold text-xl text-foreground">
+                    Business Hours
+                  </h3>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center py-2 border-b border-border/50">
+                    <span className="text-muted-foreground font-medium">
+                      Monday - Friday
+                    </span>
+                    <span className="font-semibold text-foreground">
+                      9:00 AM - 6:00 PM
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-border/50">
+                    <span className="text-muted-foreground font-medium">
+                      Saturday
+                    </span>
+                    <span className="font-semibold text-foreground">
+                      10:00 AM - 3:00 PM
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-muted-foreground font-medium">
+                      Sunday
+                    </span>
+                    <span className="font-semibold text-destructive">
+                      Closed
+                    </span>
                   </div>
                 </div>
-              </div>
-
-              <div className="bg-muted/50 p-6 rounded-lg">
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary text-primary-foreground p-3 rounded-md">
-                    <IconMail />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Email</div>
-                    <div className="text-muted-foreground text-sm">hello@bluecoastvacations.com</div>
-                  </div>
+                <div className="mt-6 p-4 bg-muted/50 rounded-xl">
+                  <p className="text-sm text-muted-foreground">
+                    <strong className="text-foreground">Note:</strong> We&apos;re
+                    also available for emergency support 24/7 for existing
+                    clients.
+                  </p>
                 </div>
-              </div>
+              </Card>
 
-              <div className="bg-muted/50 p-6 rounded-lg">
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary text-primary-foreground p-3 rounded-md">
-                    <IconMapPin />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Address</div>
-                    <div className="text-muted-foreground text-sm">123 Seaside Ave, Santa Barbara, CA</div>
-                  </div>
+              {/* Map Card */}
+              <Card className="bg-card p-6 rounded-2xl border-2 border-border shadow-lg overflow-hidden">
+                <h3 className="font-bold text-xl text-foreground mb-4">
+                  Find Us
+                </h3>
+                <div className="rounded-xl overflow-hidden border-2 border-border">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52901.95430941113!2d-119.74188842089844!3d34.42083400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e914c4c93884d9%3A0xdc8c5a4453c3b911!2sSanta%20Barbara%2C%20CA!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                    width="100%"
+                    height="280"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Blue Coast Vacations Location"
+                  />
                 </div>
-              </div>
-
-              <div className="bg-muted/50 p-6 rounded-lg">
-                <div className="font-semibold">Business Hours</div>
-                <div className="text-muted-foreground text-sm mt-2">Mon - Fri: 9 AM - 6 PM</div>
-                <div className="text-muted-foreground text-sm">Sat: 10 AM - 3 PM</div>
-                <div className="text-muted-foreground text-sm">Sun: Closed</div>
-              </div>
-            </div>
-
-            <div className="mt-6 bg-muted/20 p-6 rounded-lg">
-              <div className="text-muted-foreground text-sm">Map (placeholder)</div>
-              {/* <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="240" loading="lazy" /> */}
-            </div>
-          </motion.div>
+                <p className="text-sm text-muted-foreground mt-4 text-center">
+                  123 Seaside Avenue, Santa Barbara, CA 93101
+                </p>
+              </Card>
+            </motion.div>
+          </div>
         </div>
       </section>
     </main>

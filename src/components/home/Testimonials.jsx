@@ -42,7 +42,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-24 bg-muted/20 text-foreground">
+    <section className="py-20 px-6 md:px-12 lg:px-24 bg-red-500 text-foreground">
       <div className="mx-auto max-w-7xl">
         <motion.div
           className="mb-12 text-center"
@@ -71,7 +71,7 @@ export default function Testimonials() {
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: idx * 0.08 }}
             >
-              <Card className="group bg-card p-8 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all">
+              <Card className="group bg-red-500 p-8 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all">
                 <div className="flex items-center gap-4 px-6">
                   <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 relative">
                     <Image

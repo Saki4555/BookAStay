@@ -67,8 +67,8 @@ export const NavBody = ({
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-md bg-secondary/10 px-4 py-2 md:flex ",
-        visible && "bg-secondary/50",
+        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-md text-white bg-secondary/10 px-4 py-2 md:flex ",
+        visible && "bg-muted/85 text-muted-foreground",
         className
       )}>
       {children}
@@ -79,6 +79,7 @@ export const NavBody = ({
 export const NavItems = ({
   items,
   className,
+
   onItemClick
 }) => {
   const [hovered, setHovered] = useState(null);
@@ -87,7 +88,8 @@ export const NavItems = ({
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        " hidden  flex-row items-center justify-center space-x-2 text-sm font-medium  transition duration-200 text-white   md:flex lg:space-x-2",
+        " hidden  flex-row items-center justify-center space-x-2 text-sm font-medium  transition duration-200   md:flex lg:space-x-2",
+        
         className
       )}>
       {items.map((item, idx) => (
@@ -183,9 +185,9 @@ export const MobileNavToggle = ({
   onClick
 }) => {
   return isOpen ? (
-    <IconX className="text-black dark:text-white" onClick={onClick} />
+    <IconX className="text-black " onClick={onClick} />
   ) : (
-    <IconMenu2 className="text-black dark:text-white" onClick={onClick} />
+    <IconMenu2 className="text-black " onClick={onClick} />
   );
 };
 
@@ -193,7 +195,7 @@ export const NavbarLogo = () => {
   return (
     <a
       href="#"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-primary-foreground">
+      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal ">
         {/* //! logo */}
       {/* <img
         src="https://assets.aceternity.com/logo-dark.png"

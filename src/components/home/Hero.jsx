@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
@@ -14,6 +12,7 @@ import {
 } from "@/components/ui/carousel";
 import { ArrowRight } from "lucide-react";
 import Fade from "embla-carousel-fade";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function VillaHeroCarousel() {
   const slides = [
@@ -72,7 +71,12 @@ export default function VillaHeroCarousel() {
           align: "start",
           loop: true,
         }}
-        plugins={[Fade()]}
+        plugins={[
+          Fade(),
+          Autoplay({
+            delay: 4000,
+          }),
+        ]}
         className="w-full"
       >
         <CarouselContent>

@@ -38,10 +38,10 @@ useEffect(() => {
   console.log(isScrolled);
 
   return (
-    <nav className={cn(" h-16 w-full overflow-hidden bg-secondary/10", isScrolled && !isVisible ? "backdrop-blur-lg bg-secondary/30" : "backdrop-blur-none", isVisible && "bg-secondary/50" )}  >
+    <nav className={cn(" h-16 w-full overflow-hidden bg-secondary/10", isScrolled && !isVisible ? "backdrop-blur-lg bg-muted/80" : "backdrop-blur-none", isVisible && "bg-muted/95" )}  >
       <div className="mx-auto flex h-full w-full max-w-[1200px] items-center justify-between px-4 py-1">
         {isVisible ? (
-          <span className="text-white md:hidden">Menu</span>
+          <span className="text-muted-foreground md:hidden">Menu</span>
         ) : (
           <div className="animate-fade-up relative flex items-center gap-3 transition-all duration-300 md:static">
             {/* logo */}
@@ -52,16 +52,16 @@ useEffect(() => {
                 alt="Logo"
               />
             </a>
-            <span className="text-white">BookAStay</span>
+            <span className={cn("text-white", isScrolled && "text-muted-foreground")}>BookAStay</span>
           </div>
         )}
 
         <div className="md:hidden">
           <button onClick={toggleMenu}>
             {isVisible ? (
-              <X className="text-white hover:text-white" />
+              <X className={cn("text-white hover:text-primary", (isScrolled || isVisible) && "text-muted-foreground")} />
             ) : (
-              <Menu className="text-white hover:text-white" />
+              <Menu className={cn("text-white hover:text-primary", (isScrolled || isVisible) && "text-muted-foreground")} />
             )}
           </button>
         </div>
@@ -72,6 +72,7 @@ useEffect(() => {
           {NAV_ITEMS.map((item) => (
             <li
               key={item.link}
+              onClick={toggleMenu}
               className="flex items-center border-b border-border/65 px-4 text-2xl md:border-y-0 md:border-e md:px-8 md:text-base md:first:border-s md:last:ml-auto md:last:border-none md:last:px-0"
             >
               <Link

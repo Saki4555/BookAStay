@@ -9,9 +9,10 @@ export default function AboutPage() {
   return (
     <main className="bg-background text-foreground">
       <AboutHero />
+       <StatsSection />
       <StorySection />
       <CoreValuesSection />
-      <StatsSection />
+     
     </main>
   );
 }

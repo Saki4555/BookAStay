@@ -11,22 +11,22 @@ import { Button } from '@/components/ui/button';
 // Story Section Component
 const StorySection = () => {
   return (
-    <section className="py-16 sm:py-20 md:py-28 lg:py-32 px-4 sm:px-6 md:px-12 lg:px-16 bg-background">
+    <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 md:px-12 lg:px-16 bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="grid gap-12 lg:gap-16 md:grid-cols-2 items-center">
+        <div className="grid gap-12 lg:gap-16 group md:grid-cols-2 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -30 }} 
             whileInView={{ opacity: 1, x: 0 }} 
-            viewport={{ once: true }} 
+            viewport={{ once: true, amount: 0.2 }} 
             transition={{ duration: 0.7 }}
             className="order-2 md:order-1"
           >
             <div className="relative">
-              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-primary/20 rounded-2xl -z-10" />
+              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-primary/20 rounded-lg -z-10" />
               <img 
                 src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=900&q=80" 
                 alt="Luxury property exterior" 
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                className="rounded-lg  shadow-lg w-full h-auto object-cover"
               />
             </div>
           </motion.div>
@@ -34,7 +34,7 @@ const StorySection = () => {
           <motion.div 
             initial={{ opacity: 0, x: 30 }} 
             whileInView={{ opacity: 1, x: 0 }} 
-            viewport={{ once: true }} 
+            viewport={{ once: true, amount: 0.2 }} 
             transition={{ duration: 0.7 }}
             className="order-1 md:order-2"
           >

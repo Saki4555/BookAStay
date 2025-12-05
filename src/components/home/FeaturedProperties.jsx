@@ -78,7 +78,7 @@ export default function FeaturedCollections() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className={`group relative overflow-hidden rounded-xl bg-secondary cursor-pointer ${
+              className={`group relative overflow-hidden rounded-lg bg-secondary cursor-pointer ${
                 idx === 0 ? "md:col-span-2 row-span-1" : ""
               } ${idx === 1 ? "md:col-span-1 row-span-1" : ""} ${
                 idx === 2 ? "md:col-span-1 row-span-1" : ""
@@ -103,7 +103,7 @@ export default function FeaturedCollections() {
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-10">
                   
                   {/* Subtitle */}
-                  <div className="flex items-center gap-4 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">
+                  <div className="flex items-center gap-4 mb-3 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-transform duration-500 transform translate-y-4 group-hover:translate-y-0">
                     <span className="h-px w-8 bg-secondary-foreground/60"></span>
                     <span className="text-xs font-bold tracking-[0.2em] text-secondary-foreground/90 uppercase">
                       {item.subtitle}
@@ -117,7 +117,7 @@ export default function FeaturedCollections() {
                   </h3>
 
                   {/* Button */}
-                  <div className="mt-6 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                  <div className="mt-6 translate-y-8 opacity-100 lg:opacity-0 lg:group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
                     <span className="px-6 py-2 border border-secondary-foreground/30 text-secondary-foreground text-sm font-medium tracking-wide rounded-full transition-all duration-300
                       hover:bg-primary hover:border-primary hover:text-primary-foreground">
                       Contact for Details

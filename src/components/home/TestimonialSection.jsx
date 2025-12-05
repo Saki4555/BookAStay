@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { TESTIMONIALS } from "@/lib/constants";
+import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 
 
 
@@ -34,8 +35,8 @@ export function TestimonialsSection() {
 
   return (
     <section>
-      <div className="bg-muted min-h-auto py-24">
-        <div className="container mx-auto w-full max-w-6xl px-6">
+      <div className="bg-muted/70 py-20 lg:py-24">
+        <div className="container mx-auto w-full max-w-6xl px-6 pb-10">
           <motion.div
             className="mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -60,7 +61,7 @@ export function TestimonialsSection() {
                 <div className="mb-4 flex justify-center gap-2">
                   <motion.button
                     onClick={handlePrev}
-                    className="group/button bg-background flex h-8 w-8 items-center justify-center rounded-full border shadow-lg transition-all duration-200 hover:scale-110 hover:shadow-xl"
+                    className="group/button bg-background flex h-8 w-8 items-center justify-center rounded-lg border border-accent shadow-lg transition-all duration-200 hover:scale-110 hover:shadow-xl"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, x: -20 }}
@@ -68,11 +69,11 @@ export function TestimonialsSection() {
                     transition={{ duration: 0.3, delay: 0.4 }}
                     type="button"
                   >
-                    <ChevronLeft className="text-foreground h-5 w-5 transition-transform duration-300 group-hover/button:-rotate-12" />
+                    <IconArrowNarrowLeft className="text-foreground h-5 w-5 transition-transform duration-300 group-hover/button:-rotate-12" />
                   </motion.button>
                   <motion.button
                     onClick={handleNext}
-                    className="group/button bg-background flex h-8 w-8 items-center justify-center rounded-full border shadow-lg transition-all duration-200 hover:scale-110 hover:shadow-xl"
+                    className="group/button bg-background flex h-8 w-8 items-center justify-center rounded-lg border border-accent   shadow-lg transition-all duration-200 hover:scale-110 hover:shadow-xl"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, x: 20 }}
@@ -80,7 +81,7 @@ export function TestimonialsSection() {
                     transition={{ duration: 0.3, delay: 0.4 }}
                     type="button"
                   >
-                    <ChevronRight className="text-foreground h-5 w-5 transition-transform duration-300 group-hover/button:rotate-12" />
+                    <IconArrowNarrowRight className="text-foreground h-5 w-5 transition-transform duration-300 group-hover/button:rotate-12" />
                   </motion.button>
                 </div>
                 <div className="relative h-full w-full max-w-md">
@@ -109,7 +110,7 @@ export function TestimonialsSection() {
                         }}
                         className={`absolute inset-0 min-h-fit ${isActive(index) ? "z-10" : "z-0"}`}
                       >
-                        <div className="bg-background rounded-2xl border px-6 py-6 shadow-lg transition-all duration-200">
+                        <div className="bg-background rounded-lg border border-accent px-6 py-6 shadow-lg transition-all duration-200">
                           <motion.p
                             key={active}
                             initial={{ opacity: 0, y: 10 }}
@@ -155,11 +156,11 @@ export function TestimonialsSection() {
                                 {testimonial.fallbackText}
                               </AvatarFallback>
                             </Avatar>
-                            <div>
+                            <div className="">
                               <div className="text-foreground font-semibold">
                                 {testimonial.name}
                               </div>
-                              <span className="text-muted-foreground text-sm">
+                              <span className="text-muted-foreground  text-sm">
                                 {testimonial.role}
                               </span>
                             </div>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+
 
 @theme inline {
   /* Animation Variables - Keep */
@@ -50,30 +50,31 @@
   --background: #FAFAFA; 
   --foreground: #252525; 
 
-  /* Component Backgrounds */
-  --card: #FFFFFF;
-  --card-foreground: #252525;
-  --popover: var(--card);
-  --popover-foreground: var(--card-foreground);
+  /* Component Backgrounds - with subtle blue tint */
+--card: #f3f6f8; /* Very subtle blue-tinted white instead of pure white */
+--card-foreground: #1E293B; /* Deep blue-gray instead of pure gray */
+--popover: var(--card);
+--popover-foreground: var(--card-foreground);
 
   /* INTERACTIVE/ACCENT COLORS - SWAPPED FOR DESIGN INTENT */
   --primary: #62baea; /* NEW PRIMARY: Background for main CTA (Muted Blue-Gray) */
   --primary-foreground: #FAFAFA; /* NEW PRIMARY FOREGROUND: Dark Text on CTA */
   
-  --secondary: #343434; /* NEW SECONDARY: Used for dark/less frequent elements (Dark Charcoal) */
-  --secondary-foreground: #FAFAFA; /* NEW SECONDARY FOREGROUND: White Text on dark secondary elements */
+/* Secondary - blue-gray harmony */
+--secondary: #2D3748; /* Dark blue-gray instead of pure charcoal */
+--secondary-foreground: #F8FAFC; /* Slightly blue-tinted white */
 
-  /* Utility & Subdued Colors */
-  --muted: #F0F0F0;
-  --muted-foreground: #8E8E8E;
-  --accent: var(--muted);
-  --accent-foreground: var(--primary-foreground); /* Text color on accent should be dark */
-  --destructive: #C74949;
+/* Utility & Subdued Colors - blue-tinted for cohesion */
+--muted: #EFF6FB; /* Light blue-gray instead of pure gray */
+--muted-foreground: #4f5c6e; /* Medium blue-gray for better harmony */
+--accent: #E0F2FE; /* Light blue tint instead of var(--muted) */
+--accent-foreground: #0F172A; /* Deep blue-black for contrast */
+--destructive: #DC2626; /* Slightly adjusted red that works better with blue */
 
   /* Structural Colors */
-  --border: #E6E6E6;
-  --input: var(--border);
-  --ring: #34343480;
+  --border: #d4e7f4; /* Soft blue-tinted border for subtle cohesion */
+  --input: #D4E8F5; /* Soft blue-tinted border that complements primary */
+  --ring: #62baea80; /* Primary color at 50% opacity for focus rings */
 }
 
 

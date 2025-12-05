@@ -45,9 +45,9 @@ const itemVariants = {
 
 export default function FAQ() {
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-24 bg-background text-foreground relative overflow-hidden">
+    <section className="py-24 px-6 md:px-12 lg:px-24 bg-muted/30 relative overflow-hidden">
       {/* Decorative blurred blob for depth */}
-      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-secondary/30 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
       <div className="mx-auto max-w-7xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
@@ -78,7 +78,7 @@ export default function FAQ() {
               </p>
 
               {/* Call to Action Box - Great for Lead Gen */}
-              <div className="p-6 bg-secondary/50 rounded-2xl border border-secondary backdrop-blur-sm">
+              <div className="p-6 bg-card rounded-lg border border-accent backdrop-blur-sm">
                 <h4 className="font-semibold text-foreground mb-2">
                   Still have questions?
                 </h4>
@@ -111,7 +111,7 @@ export default function FAQ() {
                     value={`item-${idx}`} 
                     className="border-b border-border/50 data-[state=open]:border-primary/50 transition-colors duration-300"
                   >
-                    <AccordionTrigger className="py-6 text-lg font-medium hover:text-primary transition-colors hover:no-underline text-left [&[data-state=open]]:text-primary">
+                    <AccordionTrigger className="py-6 text-lg font-medium hover:text-primary transition-colors hover:no-underline text-left data-[state=open]:text-primary">
                       {item.q}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">

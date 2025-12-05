@@ -8,10 +8,10 @@ import { ArrowRight } from "lucide-react";
 
 export default function CallToAction() {
   return (
-    <section className="py-24 px-6 md:px-12 bg-background">
-      <div className="max-w-7xl mx-auto">
+    <section className="  bg-background">
+      <div className="">
         {/* Floating Dark Card */}
-        <div className="relative overflow-hidden rounded-md bg-secondary px-6 py-16 md:px-16 md:py-24 text-center shadow-2xl">
+        <div className="relative overflow-hidden bg-secondary px-6 py-16 md:px-16 md:py-24 text-center shadow-2xl">
           
           {/* Background Texture Effects */}
           <div className="absolute inset-0 z-0 opacity-10">

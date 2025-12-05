@@ -61,7 +61,7 @@ const ModernValueCard = ({ value, index }) => {
   return (
     <FadeUp delay={delay} className="h-full">
       <div
-        className="group relative h-full bg-background border border-border/60 rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
+        className="group relative h-full bg-card border border-border/60 rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
       >
         {/* Hover Gradient Effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -69,11 +69,11 @@ const ModernValueCard = ({ value, index }) => {
         <div className="relative p-6 sm:p-8 flex flex-col h-full z-10">
           {/* Header Section */}
           <div className="flex justify-between items-start mb-6">
-            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
               <Icon size={24} strokeWidth={1.5} />
             </div>
             {value.accent && (
-              <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-secondary text-secondary-foreground border border-border/50">
+              <span className="px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-accent text-accent-foreground border border-border/50">
                 {value.accent}
               </span>
             )}
@@ -98,7 +98,7 @@ const ModernValueCard = ({ value, index }) => {
 
 export default function CoreValuesSection() {
   return (
-    <section className="relative py-24 sm:py-32 overflow-hidden bg-background">
+    <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-background">
       
       {/* Background Pattern (Dot Grid) */}
       <div className="absolute inset-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)] opacity-50 -z-10" />

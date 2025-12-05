@@ -16,7 +16,6 @@ export default function AppDesktopNavbar() {
 
 
 
-
   return (
     <>
       <Navbar className="fixed w-full top-0">
