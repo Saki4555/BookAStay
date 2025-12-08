@@ -8,46 +8,12 @@ import {
   IconUsers,
 } from "@tabler/icons-react";
 import { motion } from "motion/react";
-
-const highlights = [
-  {
-    id: 1,
-    icon: <IconBeach size={40} />,
-    title: "Near the Sea",
-    description:
-      "Prime beachfront location with stunning ocean views and easy beach access.",
-  },
-  {
-    id: 2,
-    icon: <IconMapPin size={40} />,
-    title: "Peaceful Location",
-    description:
-      "Tranquil setting away from the crowds, perfect for relaxation.",
-  },
-  {
-    id: 3,
-    icon: <IconHome size={40} />,
-    title: "Clean & Comfortable Rooms",
-    description:
-      "Well-maintained spaces designed for your comfort and convenience.",
-  },
-  {
-    id: 4,
-    icon: <IconUsers size={40} />,
-    title: "Family Friendly",
-    description:
-      "Safe and welcoming environment suitable for guests of all ages.",
-  },
-  {
-    id: 5,
-    icon: <IconCalendar size={40} />,
-    title: "Easy Booking",
-    description:
-      "Simple reservation process with flexible options and instant confirmation.",
-  },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function WhyChooseUs() {
+  const { t } = useLanguage();
+
+  const highlights = t("home.whyChooseUs.highlights");
   const headerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
@@ -71,7 +37,7 @@ export default function WhyChooseUs() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            Why stay with us
+            {t("home.whyChooseUs.header")}
           </motion.h2>
 
           <motion.p
@@ -82,7 +48,7 @@ export default function WhyChooseUs() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           >
-            Discover what makes our seaside retreat truly exceptional
+            {t("home.whyChooseUs.description")}
           </motion.p>
         </div>
 
@@ -90,7 +56,7 @@ export default function WhyChooseUs() {
         <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.slice(0, 4).map((h, idx) => (
             <motion.div
-              key={h.id}
+              key={idx}
               className="group flex rounded-lg flex-col bg-card p-10 hover:shadow-2xl transition-shadow duration-300"
               variants={cardVariants}
               initial="hidden"

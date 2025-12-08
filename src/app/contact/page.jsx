@@ -8,8 +8,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactPage() {
+  const { t } = useLanguage();
+  const contactData = t("contact");
+  
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -31,29 +35,11 @@ export default function ContactPage() {
     }, 1000);
   }
 
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: "Call Us",
-      detail: "+1 (805) 555-0123",
-      subDetail: "Mon-Fri, 9AM-6PM PST",
-      link: "tel:+18055550123",
-    },
-    {
-      icon: Mail,
-      title: "Email Us",
-      detail: "hello@bluecoastvacations.com",
-      subDetail: "We respond within 24 hours",
-      link: "mailto:hello@bluecoastvacations.com",
-    },
-    {
-      icon: MapPin,
-      title: "Visit Us",
-      detail: "123 Seaside Avenue",
-      subDetail: "Santa Barbara, CA 93101",
-      link: "https://maps.google.com/?q=Santa+Barbara+CA",
-    },
-  ];
+  const iconMap = {
+    "Call Us": Phone,
+    "Email Us": Mail,
+    "Visit Us": MapPin,
+  };
 
   return (
     <main className="bg-background text-foreground min-h-screen">
@@ -82,17 +68,16 @@ export default function ContactPage() {
               <div className="flex items-center gap-3 mb-6">
                 <span className="h-px w-12 bg-primary" />
                 <span className="text-primary text-sm font-semibold tracking-wider uppercase">
-                  Let&apos;s Connect
+                  {contactData.hero.badge}
                 </span>
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-secondary-foreground mb-6 leading-tight">
-                Get In Touch
+                {contactData.hero.title}
               </h1>
 
               <p className="text-lg md:text-xl text-secondary-foreground/90 leading-relaxed max-w-2xl">
-                Ready to transform your vacation rental business? Let&apos;s discuss
-                how we can maximize your property&apos;s potential.
+                {contactData.hero.description}
               </p>
             </motion.div>
           </div>
@@ -112,38 +97,41 @@ export default function ContactPage() {
           >
             <Card className="bg-card p-8 md:p-10 rounded-2xl border-2 border-border shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                {contactInfo.map((info, idx) => (
-                  <motion.a
-                    key={idx}
-                    href={info.link}
-                    target={info.link.startsWith("http") ? "_blank" : undefined}
-                    rel={
-                      info.link.startsWith("http")
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
-                    className="group flex flex-col items-center text-center space-y-3"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  >
-                    <div className="bg-primary/10 text-primary p-3 rounded-xl group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
-                      <info.icon className="w-5 h-5" strokeWidth={2} />
-                    </div>
-                    <div>
-                      <div className="font-bold text-base mb-1 text-foreground group-hover:text-primary transition-colors">
-                        {info.title}
+                {contactData.contactInfo.map((info, idx) => {
+                  const IconComponent = iconMap[info.title] || Phone;
+                  return (
+                    <motion.a
+                      key={idx}
+                      href={info.link}
+                      target={info.link.startsWith("http") ? "_blank" : undefined}
+                      rel={
+                        info.link.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      className="group flex flex-col items-center text-center space-y-3"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    >
+                      <div className="bg-primary/10 text-primary p-3 rounded-xl group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
+                        <IconComponent className="w-5 h-5" strokeWidth={2} />
                       </div>
-                      <div className="text-foreground font-medium text-sm mb-0.5">
-                        {info.detail}
+                      <div>
+                        <div className="font-bold text-base mb-1 text-foreground group-hover:text-primary transition-colors">
+                          {info.title}
+                        </div>
+                        <div className="text-foreground font-medium text-sm mb-0.5">
+                          {info.detail}
+                        </div>
+                        <div className="text-muted-foreground text-xs">
+                          {info.subDetail}
+                        </div>
                       </div>
-                      <div className="text-muted-foreground text-xs">
-                        {info.subDetail}
-                      </div>
-                    </div>
-                  </motion.a>
-                ))}
+                    </motion.a>
+                  );
+                })}
               </div>
             </Card>
           </motion.div>
@@ -160,11 +148,10 @@ export default function ContactPage() {
             >
               <div className="mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  Send us a message
+                  {contactData.form.header}
                 </h2>
                 <p className="text-muted-foreground text-lg">
-                  Fill out the form below and we&apos;ll get back to you within 24
-                  hours.
+                  {contactData.form.description}
                 </p>
               </div>
 
@@ -172,7 +159,7 @@ export default function ContactPage() {
                 <div className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="name" className="text-base font-semibold">
-                      Full Name *
+                      {contactData.form.labels.name}
                     </Label>
                     <Input
                       id="name"
@@ -180,7 +167,7 @@ export default function ContactPage() {
                       value={form.name}
                       onChange={onChange}
                       required
-                      placeholder="John Doe"
+                      placeholder={contactData.form.placeholders.name}
                       className="h-12 text-base"
                     />
                   </div>
@@ -191,7 +178,7 @@ export default function ContactPage() {
                         htmlFor="email"
                         className="text-base font-semibold"
                       >
-                        Email Address *
+                        {contactData.form.labels.email}
                       </Label>
                       <Input
                         id="email"
@@ -200,7 +187,7 @@ export default function ContactPage() {
                         value={form.email}
                         onChange={onChange}
                         required
-                        placeholder="john@example.com"
+                        placeholder={contactData.form.placeholders.email}
                         className="h-12 text-base"
                       />
                     </div>
@@ -209,14 +196,14 @@ export default function ContactPage() {
                         htmlFor="phone"
                         className="text-base font-semibold"
                       >
-                        Phone Number
+                        {contactData.form.labels.phone}
                       </Label>
                       <Input
                         id="phone"
                         name="phone"
                         value={form.phone}
                         onChange={onChange}
-                        placeholder="+1 (555) 000-0000"
+                        placeholder={contactData.form.placeholders.phone}
                         className="h-12 text-base"
                       />
                     </div>
@@ -227,14 +214,14 @@ export default function ContactPage() {
                       htmlFor="subject"
                       className="text-base font-semibold"
                     >
-                      Subject
+                      {contactData.form.labels.subject}
                     </Label>
                     <Input
                       id="subject"
                       name="subject"
                       value={form.subject}
                       onChange={onChange}
-                      placeholder="How can we help you?"
+                      placeholder={contactData.form.placeholders.subject}
                       className="h-12 text-base"
                     />
                   </div>
@@ -244,7 +231,7 @@ export default function ContactPage() {
                       htmlFor="message"
                       className="text-base font-semibold"
                     >
-                      Your Message *
+                      {contactData.form.labels.message}
                     </Label>
                     <Textarea
                       id="message"
@@ -253,7 +240,7 @@ export default function ContactPage() {
                       value={form.message}
                       onChange={onChange}
                       required
-                      placeholder="Tell us about your vacation rental property and goals..."
+                      placeholder={contactData.form.placeholders.message}
                       className="text-base resize-none"
                     />
                   </div>
@@ -266,12 +253,12 @@ export default function ContactPage() {
                       className="w-full md:w-auto px-8 h-12 text-base font-semibold group"
                     >
                       {isSubmitting ? (
-                        <>Processing...</>
+                        <>{contactData.form.button.processing}</>
                       ) : submitted ? (
-                        <>Message Sent!</>
+                        <>{contactData.form.button.sent}</>
                       ) : (
                         <>
-                          Send Message
+                          {contactData.form.button.send}
                           <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </>
                       )}
@@ -285,11 +272,10 @@ export default function ContactPage() {
                       className="bg-primary/10 border-2 border-primary/30 text-primary px-6 py-4 rounded-xl"
                     >
                       <p className="font-semibold">
-                        ✓ Thank you for reaching out!
+                        {contactData.form.confirmation.title}
                       </p>
                       <p className="text-sm mt-1 text-primary/80">
-                        We&apos;ve received your message and will respond within 24
-                        hours.
+                        {contactData.form.confirmation.description}
                       </p>
                     </motion.div>
                   )}
@@ -312,40 +298,24 @@ export default function ContactPage() {
                     <Clock className="w-6 h-6" strokeWidth={2} />
                   </div>
                   <h3 className="font-bold text-xl text-foreground">
-                    Business Hours
+                    {contactData.sidebar.hours.title}
                   </h3>
                 </div>
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center py-2 border-b border-border/50">
-                    <span className="text-muted-foreground font-medium">
-                      Monday - Friday
-                    </span>
-                    <span className="font-semibold text-foreground">
-                      9:00 AM - 6:00 PM
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-border/50">
-                    <span className="text-muted-foreground font-medium">
-                      Saturday
-                    </span>
-                    <span className="font-semibold text-foreground">
-                      10:00 AM - 3:00 PM
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-2">
-                    <span className="text-muted-foreground font-medium">
-                      Sunday
-                    </span>
-                    <span className="font-semibold text-destructive">
-                      Closed
-                    </span>
-                  </div>
+                  {contactData.sidebar.hours.schedule.map((sch, idx) => (
+                    <div key={idx} className="flex justify-between items-center py-2 border-b border-border/50">
+                      <span className="text-muted-foreground font-medium">
+                        {sch.day}
+                      </span>
+                      <span className={`font-semibold ${sch.highlight ? "text-destructive" : "text-foreground"}`}>
+                        {sch.time}
+                      </span>
+                    </div>
+                  ))}
                 </div>
                 <div className="mt-6 p-4 bg-muted/50 rounded-xl">
                   <p className="text-sm text-muted-foreground">
-                    <strong className="text-foreground">Note:</strong> We&apos;re
-                    also available for emergency support 24/7 for existing
-                    clients.
+                    <strong className="text-foreground">Note:</strong> {contactData.sidebar.hours.note}
                   </p>
                 </div>
               </Card>
@@ -353,7 +323,7 @@ export default function ContactPage() {
               {/* Map Card */}
               <Card className="bg-card p-6 rounded-2xl border-2 border-border shadow-lg overflow-hidden">
                 <h3 className="font-bold text-xl text-foreground mb-4">
-                  Find Us
+                  {contactData.sidebar.map.title}
                 </h3>
                 <div className="rounded-xl overflow-hidden border-2 border-border">
                   <iframe
@@ -368,7 +338,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <p className="text-sm text-muted-foreground mt-4 text-center">
-                  123 Seaside Avenue, Santa Barbara, CA 93101
+                  {contactData.sidebar.map.address}
                 </p>
               </Card>
             </motion.div>

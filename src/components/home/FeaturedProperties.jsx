@@ -1,40 +1,12 @@
 "use client";
 
 import { motion } from "motion/react";
-
-const collections = [
-  {
-    id: 1,
-    title: "Waterfront Estates",
-    subtitle: "COASTAL LIVING",
-    img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80",
-    // ACTION: Updated to link to a lead-generating page
-    href: "/contact", 
-  },
-  {
-    id: 2,
-    title: "Urban Penthouses",
-    subtitle: "CITY CENTER",
-    img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80",
-    href: "/contact", 
-  },
-  {
-    id: 3,
-    title: "Modern Retreats",
-    subtitle: "ARCHITECTURE",
-    img: "https://images.unsplash.com/photo-1600596542815-e32c2159f828?w=1920&q=80",
-    href: "/our-services", // You can vary this to hit your main service page
-  },
-  {
-    id: 4,
-    title: "Historic Manors",
-    subtitle: "CLASSIC DESIGN",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80",
-    href: "/contact", 
-  },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function FeaturedCollections() {
+  const { t } = useLanguage();
+
+  const collections = t("home.collections.items");
   return (
     <section className="py-24 px-6 md:px-12 lg:px-24 bg-background text-foreground">
       <div className="max-w-7xl mx-auto">
@@ -47,7 +19,7 @@ export default function FeaturedCollections() {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl font-bold text-foreground mb-4"
           >
-            Curated Collections
+            {t("home.collections.header")}
           </motion.h2>
           
           <motion.div 
@@ -65,7 +37,7 @@ export default function FeaturedCollections() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-muted-foreground text-lg"
           >
-            Explore our exclusive portfolio of hand-picked properties, designed for the discerning client.
+            {t("home.collections.subtitle")}
           </motion.p>
         </div>
 
@@ -73,7 +45,7 @@ export default function FeaturedCollections() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 auto-rows-[400px]">
           {collections.map((item, idx) => (
             <motion.div
-              key={item.id}
+              key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -120,7 +92,7 @@ export default function FeaturedCollections() {
                   <div className="mt-6 translate-y-8 opacity-100 lg:opacity-0 lg:group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
                     <span className="px-6 py-2 border border-secondary-foreground/30 text-secondary-foreground text-sm font-medium tracking-wide rounded-full transition-all duration-300
                       hover:bg-primary hover:border-primary hover:text-primary-foreground">
-                      Contact for Details
+                      {item.button}
                     </span>
                   </div>
                 </div>

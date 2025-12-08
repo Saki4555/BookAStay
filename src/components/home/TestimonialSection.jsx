@@ -4,8 +4,8 @@ import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { TESTIMONIALS } from "@/lib/constants";
 import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 
 
@@ -13,6 +13,8 @@ import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 export function TestimonialsSection() {
   const [active, setActive] = useState(0);
   const [autoplay] = useState(false);
+  const { t } = useLanguage();
+  const TESTIMONIALS = t("testimonials");
 
   const handleNext = useCallback(() => {
     setActive((prev) => (prev + 1) % TESTIMONIALS.length);
@@ -48,11 +50,10 @@ export function TestimonialsSection() {
               {/* Left side - Title and description */}
               <div className="flex flex-col justify-center">
                 <h2 className="text-foreground mb-4 text-4xl font-semibold">
-                 What Our Clients Are Saying
+                 {t("home.testimonials.header")}
                 </h2>
                 <p className="text-foreground/70 text-lg text-balance">
-                  Professional service and personalized attention, delivering
-            five-star experiences for guests and owners alike.
+                  {t("home.testimonials.description")}
                 </p>
               </div>
               {/* Right side - Testimonial card */}

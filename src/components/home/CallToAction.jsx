@@ -5,8 +5,10 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function CallToAction() {
+  const { t } = useLanguage();
   return (
     <section className="  bg-background">
       <div className="">
@@ -39,7 +41,7 @@ export default function CallToAction() {
               transition={{ duration: 0.5 }}
               className="inline-block mb-6 px-4 py-1.5 rounded-full border border-secondary-foreground/20 bg-secondary-foreground/5 text-sm font-medium text-secondary-foreground/90 backdrop-blur-sm"
             >
-              Accepting New Properties for 2025
+              {t("home.callToAction.badge")}
             </motion.span>
 
             <motion.h2
@@ -49,8 +51,7 @@ export default function CallToAction() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground mb-6 tracking-tight"
             >
-              Ready to elevate your <br className="hidden md:block" />
-              investment portfolio?
+              {t("home.callToAction.header")} <br className="hidden md:block" />
             </motion.h2>
 
             <motion.p
@@ -60,7 +61,7 @@ export default function CallToAction() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-secondary-foreground/80 mb-10 leading-relaxed max-w-2xl"
             >
-              Join the homeowners who earn 30% more revenue with our boutique management strategy. No stress, just results.
+              {t("home.callToAction.description")}
             </motion.p>
 
             <motion.div
@@ -76,7 +77,7 @@ export default function CallToAction() {
                   size="lg" 
                   className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 h-14 px-8 rounded-full text-lg shadow-[0_0_20px_-5px_var(--color-primary)]"
                 >
-                  Get a Free Proposal
+                  {t("home.callToAction.primaryButton")}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
@@ -88,7 +89,7 @@ export default function CallToAction() {
                   size="lg"
                   className="bg-transparent border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10 hover:text-secondary-foreground h-14 px-8 rounded-full text-lg"
                 >
-                  Explore Services
+                  {t("home.callToAction.secondaryButton")}
                 </Button>
               </Link>
             </motion.div>

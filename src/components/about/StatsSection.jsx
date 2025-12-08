@@ -3,15 +3,12 @@
 import React from "react";
 import { motion } from "motion/react";
 import CountUp from "react-countup";
+import { useLanguage } from "@/context/LanguageContext";
 
 // Stats Section Component
 const StatsSection = () => {
-  const stats = [
-    { value: "500+", label: "Properties Managed" },
-    { value: "98%", label: "Client Satisfaction" },
-    { value: "10+", label: "Years Experience" },
-    { value: "4.9", label: "Average Guest Rating" },
-  ];
+  const { t } = useLanguage();
+  const stats = t("about.stats");
 
   return (
     <section className="py-16  sm:py-20  lg:py-24 px-4 sm:px-6 md:px-12 lg:px-16   relative overflow-hidden">

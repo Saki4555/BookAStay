@@ -8,12 +8,24 @@ import {
  
 
 } from "@/components/ui/resizable-navbar";
-import { NAV_ITEMS } from "@/lib/constants";
+import { useLanguage } from "@/context/LanguageContext";
+import { LanguageSwitcher } from "../LanguageSwitcher";
+import { useEffect, useState } from "react";
 
 
 
 export default function AppDesktopNavbar() {
+  const { t } = useLanguage();
+  const NAV_ITEMS = t("nav");
+ const [isMounted, setIsMounted] = useState(false);
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
 
   return (
@@ -23,7 +35,7 @@ export default function AppDesktopNavbar() {
         <NavBody>
           <NavbarLogo />
           <NavItems items={NAV_ITEMS} />
-        
+        <LanguageSwitcher />
         </NavBody>
 
         

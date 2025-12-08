@@ -1,21 +1,25 @@
 'use client'
-import { NAV_ITEMS } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { LanguageSwitcher } from '../LanguageSwitcher'
+import { useLanguage } from '@/context/LanguageContext'
 
 
 
 const AppMobileNavbar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useLanguage();
+  const NAV_ITEMS = t("nav");
+   const [isMounted, setIsMounted] = useState(false);
 
-  const toggleMenu = () => {
-    setIsVisible(!isVisible)
-  }
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
-useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       if(window.scrollY > 20) {
         setIsScrolled(true);
@@ -34,6 +38,16 @@ useEffect(() => {
       window.removeEventListener('scroll', handleScroll);
     }
   }, [])
+
+  if (!isMounted) {
+    return null;
+  }
+
+  const toggleMenu = () => {
+    setIsVisible(!isVisible)
+  }
+
+
 
   console.log(isScrolled);
 
@@ -56,7 +70,8 @@ useEffect(() => {
           </div>
         )}
 
-        <div className="md:hidden">
+        <div className="flex  md:hidden gap-0">
+          <LanguageSwitcher />
           <button onClick={toggleMenu}>
             {isVisible ? (
               <X className={cn("text-white hover:text-primary", (isScrolled || isVisible) && "text-muted-foreground")} />

@@ -5,11 +5,14 @@ import { motion } from 'motion/react';
 import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/context/LanguageContext';
 
 
 
 // Story Section Component
 const StorySection = () => {
+  const { t } = useLanguage();
+  const story = t("about.story");
   return (
     <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 md:px-12 lg:px-16 bg-background">
       <div className="max-w-7xl mx-auto">
@@ -40,27 +43,23 @@ const StorySection = () => {
           >
             <div className="flex items-center gap-3 mb-6">
               <span className="h-0.5 w-12 bg-primary" />
-              <span className="text-primary text-xs sm:text-sm font-bold tracking-widest uppercase">Our Journey</span>
+              <span className="text-primary text-xs sm:text-sm font-bold tracking-widest uppercase">{story.badge}</span>
             </div>
             
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground mb-8 leading-tight">Our Story</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground mb-8 leading-tight">{story.header}</h2>
             
             <div className="space-y-5">
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Founded by hospitality professionals who recognized a need for hands-on property management that elevates guest experiences without sacrificing owner ROI.
-              </p>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                We combine local expertise, professional photography, and proactive maintenance to create consistent five-star stays and strong earnings for owners.
-              </p>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Our team develops tailored plans for each property — from listing optimization to concierge-grade guest services — to maximize returns and preserve value.
-              </p>
+              {story.paragraphs && story.paragraphs.map((para, idx) => (
+                <p key={idx} className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                  {para}
+                </p>
+              ))}
             </div>
             
             <div className="mt-8">
               <Link href="/contact">
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                  Get in Touch
+                  {story.cta}
                 </Button>
               </Link>
             </div>

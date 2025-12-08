@@ -9,38 +9,15 @@ import {
   IconMapPin,
   IconArrowRight,
 } from "@tabler/icons-react";
-import { cn } from "@/lib/utils"; // Assuming you have a standard cn utility
+import { cn } from "@/lib/utils";
+import { useLanguage } from "@/context/LanguageContext";
 
-const values = [
-  {
-    id: "trust",
-    icon: IconShieldCheck,
-    title: "Trust & Integrity",
-    desc: "Transparent operations and clear communication. We prioritize predictable processes and ethical partnerships.",
-    accent: "Established 2010",
-  },
-  {
-    id: "guest",
-    icon: IconSparkles,
-    title: "Guest Experience",
-    desc: "Proactive welcome touches and thoughtful amenities create memorable stays that drive 5-star reviews.",
-    accent: "Tailored stays",
-  },
-  {
-    id: "support",
-    icon: IconUsers,
-    title: "Exceptional Support",
-    desc: "24/7 operations with fast response times, local cleaning teams, and proactive issue resolution.",
-    accent: "24/7 Availability",
-  },
-  {
-    id: "local",
-    icon: IconMapPin,
-    title: "Local Expertise",
-    desc: "Market insights and demand forecasting allow us to optimize pricing and increase revenue.",
-    accent: "Market-led strategy",
-  },
-];
+const iconMap = {
+  trust: IconShieldCheck,
+  guest: IconSparkles,
+  support: IconUsers,
+  local: IconMapPin,
+};
 
 const FadeUp = ({ children, delay = 0, className = "" }) => (
   <motion.div
@@ -55,7 +32,7 @@ const FadeUp = ({ children, delay = 0, className = "" }) => (
 );
 
 const ModernValueCard = ({ value, index }) => {
-  const Icon = value.icon;
+  const Icon = iconMap[value.id] || IconShieldCheck;
   const delay = index * 0.1;
 
   return (
@@ -97,6 +74,9 @@ const ModernValueCard = ({ value, index }) => {
 };
 
 export default function CoreValuesSection() {
+  const { t } = useLanguage();
+  const values = t("about.values.items");
+  const valuesData = t("about.values");
   return (
     <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-background">
       
@@ -109,13 +89,10 @@ export default function CoreValuesSection() {
           <FadeUp>
            
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6">
-              The Foundation of <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
-                Excellence
-              </span>
+              {valuesData.header}
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We deliver dependable results for owners and unforgettable experiences for guests through a rigorous and dedicated approach.
+              {valuesData.description}
             </p>
           </FadeUp>
         </div>

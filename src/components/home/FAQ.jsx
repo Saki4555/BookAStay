@@ -4,29 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { ArrowRight, Sparkles } from "lucide-react";
-
-const FAQ_ITEMS = [
-  {
-    q: "How far in advance should I book a vacation rental?",
-    a: "We recommend booking at least 2-3 months in advance for popular destinations. However, for off-peak dates, shorter notice can be accommodated.",
-  },
-  {
-    q: "Do you handle guest check-in and concierge services?",
-    a: "Yes — we offer full guest services including check-in, key exchange, concierge for local experiences, and 24/7 support.",
-  },
-  {
-    q: "Can you manage multiple properties for me?",
-    a: "Absolutely — we handle portfolio management and can scale services across multiple properties while ensuring consistent guest experience.",
-  },
-  {
-    q: "What is your pricing model for property management?",
-    a: "We offer custom pricing based on property size, location, and the level of service. Contact us for a tailored proposal.",
-  },
-  {
-    q: "Do you offer marketing and photography services?",
-    a: "Yes — professional photography, optimized listing creation, and marketing across major channels are part of our service suite.",
-  },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -44,6 +22,8 @@ const itemVariants = {
 };
 
 export default function FAQ() {
+  const { t } = useLanguage();
+  const faqItems = t("home.faq.items");
   return (
     <section className="py-24 px-6 md:px-12 lg:px-24 bg-muted/30 relative overflow-hidden">
       {/* Decorative blurred blob for depth */}
@@ -69,27 +49,27 @@ export default function FAQ() {
               </div>
 
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-                Frequently Asked <br />
+                {t("home.faq.header")} <br />
                 <span className="text-muted-foreground">Questions</span>
               </h2>
 
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Everything you need to know about our premium management services and booking process.
+                {t("home.faq.description")}
               </p>
 
               {/* Call to Action Box - Great for Lead Gen */}
               <div className="p-6 bg-card rounded-lg border border-accent backdrop-blur-sm">
                 <h4 className="font-semibold text-foreground mb-2">
-                  Still have questions?
+                  {t("home.faq.callToAction.title")}
                 </h4>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Can&apos;t find the answer you&apos;re looking for? Please chat to our friendly team.
+                  {t("home.faq.callToAction.text")}
                 </p>
                 <a 
                   href="/contact" 
                   className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group"
                 >
-                  Get in touch
+                  {t("home.faq.callToAction.button")}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
@@ -105,7 +85,7 @@ export default function FAQ() {
             viewport={{ once: true }}
           >
             <Accordion type="single" collapsible className="w-full space-y-2">
-              {FAQ_ITEMS.map((item, idx) => (
+              {faqItems.map((item, idx) => (
                 <motion.div key={idx} variants={itemVariants}>
                   <AccordionItem 
                     value={`item-${idx}`} 

@@ -13,46 +13,23 @@ import {
   IconUsers,
   IconWreckingBall,
 } from "@tabler/icons-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const headerVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
 
-const services = [
-  {
-    icon: IconSettings,
-    title: "Property Management",
-    desc: "End-to-end property care, cleaning, and inspection scheduling to ensure flawless guest stays.",
-  },
-  {
-    icon: IconUsers,
-    title: "Guest Services",
-    desc: "24/7 guest support, check-in/out coordination, and concierge services to deliver VIP experiences.",
-  },
-  {
-    icon: IconPhone,
-    title: "Marketing & Promotion",
-    desc: "Professional photography, optimized listings, and targeted promotions to boost occupancy.",
-  },
-  {
-    icon: IconWreckingBall,
-    title: "Maintenance & Repairs",
-    desc: "Trusted, vetted vendors for rapid maintenance response and preventive care.",
-  },
-  {
-    icon: IconChartLine,
-    title: "Revenue Optimization",
-    desc: "Dynamic pricing strategies and analytics to improve nightly rates and occupancy.",
-  },
-  {
-    icon: IconClock,
-    title: "24/7 Support",
-    desc: "Round-the-clock operations to help guests and protect owner assets.",
-  },
-];
+const iconMap = {
+  "Property Management": IconSettings,
+  "Guest Services": IconUsers,
+  "Revenue & Marketing": IconChartLine,
+};
 
 export default function ServicesPage() {
+  const { t } = useLanguage();
+  const servicesData = t("services");
+  const servicesGrid = t("services.servicesGrid");
   return (
     <main className="bg-background text-foreground">
       {/* Hero Section */}
@@ -77,17 +54,16 @@ export default function ServicesPage() {
               <div className="flex items-center gap-3 mb-6">
                 <span className="h-px w-12 bg-primary" />
                 <span className="text-primary text-sm font-semibold tracking-wider uppercase">
-                  Services
+                  {servicesData.hero.badge}
                 </span>
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-secondary-foreground mb-6 leading-tight">
-                Our Services
+                {servicesData.hero.title}
               </h1>
 
               <p className="text-lg md:text-xl text-secondary-foreground/90 leading-relaxed max-w-2xl">
-                A full suite of vacation rental services to help your property
-                achieve superior guest ratings and stabilized revenue.
+                {servicesData.hero.description}
               </p>
             </motion.div>
           </div>
@@ -107,57 +83,25 @@ export default function ServicesPage() {
             className="text-center max-w-3xl mx-auto mb-12"
           >
             <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-3 tracking-wide">
-              OUR EXPERTISE
+              {servicesData.sectionHeader.smallBadge}
             </span>
 
             <h2
               id="services-heading"
               className="text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-3"
             >
-              Vacation Rental Services
+              {servicesData.sectionHeader.title}
             </h2>
 
             <p className="mx-auto text-base text-muted-foreground max-w-2xl leading-relaxed">
-              Comprehensive services to maximize your guest satisfaction and
-              rental returns — from listing optimization to 24/7 guest support.
+              {servicesData.sectionHeader.description}
             </p>
           </motion.div>
 
           {/* Local 3-item services array (only used inside this section) */}
           <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                icon: IconSettings,
-                title: "Property Management",
-                desc: "Full-service property care: cleaning, check-ins, inspections and vendor coordination to keep your home guest-ready.",
-                features: [
-                  "Professional cleaning & turnovers",
-                  "Inspection & preventative maintenance",
-                  "Owner reporting & payouts",
-                ],
-              },
-              {
-                icon: IconUsers,
-                title: "Guest Services",
-                desc: "White-glove support for guests including 24/7 messaging, concierge requests, and seamless check-ins.",
-                features: [
-                  "24/7 guest communication",
-                  "Self-checkin or meet-and-greet",
-                  "Concierge & local recommendations",
-                ],
-              },
-              {
-                icon: IconChartLine,
-                title: "Revenue & Marketing",
-                desc: "Optimized pricing, professional photography, and high-converting listings to increase occupancy and nightly rates.",
-                features: [
-                  "Dynamic pricing & analytics",
-                  "Listing optimization & photography",
-                  "Targeted promotions",
-                ],
-              },
-            ].map((s, idx) => {
-              const Icon = s.icon;
+            {servicesGrid.map((s, idx) => {
+              const Icon = iconMap[s.title] || IconSettings;
               return (
                 <motion.div
                   key={s.title}
@@ -222,7 +166,7 @@ export default function ServicesPage() {
                         className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary text-primary-foreground
                              py-3 px-4 text-sm font-medium transition-colors duration-200 hover:bg-primary/90"
                       >
-                        Contact Us
+                        {s.cta}
                         <svg
                           className="w-4 h-4"
                           fill="none"
@@ -257,38 +201,19 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            How We Work
+            {t("services.processTimeline.header")}
           </motion.h3>
 
           <div className="grid gap-6 grid-cols-1 md:grid-cols-4">
-            <div className="bg-card p-8 rounded-lg shadow-sm text-center">
-              <div className="text-primary font-semibold text-xl mb-2">1</div>
-              <div className="font-semibold">Consultation</div>
-              <p className="text-muted-foreground mt-2">
-                We evaluate goals and craft a customized plan.
-              </p>
-            </div>
-            <div className="bg-card p-8 rounded-lg shadow-sm text-center">
-              <div className="text-primary font-semibold text-xl mb-2">2</div>
-              <div className="font-semibold">Onboarding</div>
-              <p className="text-muted-foreground mt-2">
-                Professional onboarding and listing optimization.
-              </p>
-            </div>
-            <div className="bg-card p-8 rounded-lg shadow-sm text-center">
-              <div className="text-primary font-semibold text-xl mb-2">3</div>
-              <div className="font-semibold">Guest Experience</div>
-              <p className="text-muted-foreground mt-2">
-                Concierge and guest services for high rating experiences.
-              </p>
-            </div>
-            <div className="bg-card p-8 rounded-lg shadow-sm text-center">
-              <div className="text-primary font-semibold text-xl mb-2">4</div>
-              <div className="font-semibold">Continuous Optimization</div>
-              <p className="text-muted-foreground mt-2">
-                Dynamic pricing and ongoing performance improvement.
-              </p>
-            </div>
+            {t("services.processTimeline.steps").map((step, idx) => (
+              <div key={idx} className="bg-card p-8 rounded-lg shadow-sm text-center">
+                <div className="text-primary font-semibold text-xl mb-2">{step.number}</div>
+                <div className="font-semibold">{step.title}</div>
+                <p className="text-muted-foreground mt-2">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

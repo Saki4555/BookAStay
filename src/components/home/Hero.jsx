@@ -13,31 +13,12 @@ import {
 import { ArrowRight } from "lucide-react";
 import Fade from "embla-carousel-fade";
 import Autoplay from "embla-carousel-autoplay";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function VillaHeroCarousel() {
-  const slides = [
-    {
-      id: 1,
-      title: "Finest holiday villa rental collection",
-      image:
-        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920&q=80",
-      alt: "Luxury villa with ocean view",
-    },
-    {
-      id: 2,
-      title: "Experience luxury living by the sea",
-      image:
-        "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=80",
-      alt: "Modern villa interior",
-    },
-    {
-      id: 3,
-      title: "Your perfect getaway awaits",
-      image:
-        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80",
-      alt: "Villa with pool at sunset",
-    },
-  ];
+  const { t } = useLanguage();
+
+  const slides = t("home.hero.slides");
 
   const [api, setApi] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -81,7 +62,7 @@ export default function VillaHeroCarousel() {
       >
         <CarouselContent>
           {slides.map((slide, index) => (
-            <CarouselItem key={slide.id}>
+            <CarouselItem key={index}>
               <div className="relative h-[500px] md:h-[600px] lg:h-[700px] w-full">
                 {/* Background Image */}
                 <div className="absolute inset-0">
@@ -175,7 +156,7 @@ export default function VillaHeroCarousel() {
                     {/* CTA Button */}
                     <button className="inline-flex items-center gap-3 bg-white text-gray-900 px-6 py-3 md:px-8 md:py-4 rounded font-semibold hover:bg-gray-100 transition-colors w-fit group">
                       <span className="text-sm md:text-base">
-                        FIND YOUR VILLA
+                        {slide.cta}
                       </span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>

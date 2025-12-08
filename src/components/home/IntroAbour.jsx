@@ -11,6 +11,7 @@ export default function IntroAbout() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
+        {/* TODO: missing translation key - home.intro.* */}
         <h2 className="text-3xl md:text-4xl font-semibold">Welcome to Our Rentals</h2>
         <p className="text-base md:text-lg text-muted-foreground">
           We are a small seaside-rental agency offering cozy, well-maintained houses near the shore.  
