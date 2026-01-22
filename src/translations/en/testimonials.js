@@ -1,50 +1,34 @@
 export const TESTIMONIALS = [
   {
-    name: "Samantha Hayes",
-    location: "Maui, HI",
-    role: "Family Traveler",
+    name: "Anna & Lukas",
+    location: "Berlin, Germany",
+    role: "Couple",
     content:
-      "Booking through Blue Coast Vacations made our family trip effortless — five-star service from start to finish.",
-    fallbackText: "SH"
+      "We stayed for a week and immediately felt at home. Falling asleep to the sound of the ocean and waking up with the tides was unforgettable.",
+    fallbackText: "AL",
   },
   {
-    name: "Diego Martinez",
-    location: "Tulum, MX",
-    role: "Event Planner",
+    name: "Sophie M.",
+    location: "Zurich, Switzerland",
+    role: "Solo traveler",
     content:
-      "A seamless experience. The concierge handled everything and our guests were impressed.",
-    fallbackText: "DM"
+      "The house is simple, beautiful, and calm. Exactly what I needed to slow down and reconnect with the island.",
+    fallbackText: "SM",
   },
   {
-    name: "Olivia Bennett",
-    location: "Santorini, GR",
-    role: "Property Owner",
+    name: "David & Emma",
+    location: "Amsterdam, Netherlands",
+    role: "Couple",
     content:
-      "We saw better occupancy and higher ratings after they optimized our listing — highly recommended.",
-    fallbackText: "OB"
+      "Pwani Mchangani is quiet and authentic. The house gave us privacy, space, and the feeling of truly living by the sea.",
+    fallbackText: "DE",
   },
   {
-    name: "Marcus Chen",
-    location: "Aspen, CO",
-    role: "Investment Property Owner",
+    name: "Marco R.",
+    location: "Milan, Italy",
+    role: "Repeat guest",
     content:
-      "The property management team took all the stress out of owning a high-end rental. Flawless maintenance and constant bookings.",
-    fallbackText: "MC"
-  },
-  {
-    name: "Layla Hassan",
-    location: "Dubai, UAE",
-    role: "Luxury Traveler",
-    content:
-      "Unforgettable trip! Our custom itinerary and private villa were perfect. They truly understand luxury travel.",
-    fallbackText: "LH"
-  },
-  {
-    name: "Ethan Riley",
-    location: "Cotswolds, UK",
-    role: "Vacation Guest",
-    content:
-      "From initial inquiry to check-out, the process was transparent and easy. The home exceeded every expectation.",
-    fallbackText: "ER"
+      "This was my second stay, and I’ll come back again. The light, the breeze, the simplicity — it’s a special place.",
+    fallbackText: "MR",
   },
 ];

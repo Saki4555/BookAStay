@@ -33,87 +33,124 @@ export const HOME_TRANSLATIONS_DE = {
       },
     ],
   },
-  collections: {
-    header: "Kuratierten Kollektionen",
-    subtitle: "Entdecken Sie unser exklusives Portfolio handverlesener Immobilien für anspruchsvolle Kunden.",
-    items: [
-      {
-        title: "Wasserfront-Anwesen",
-        img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80",
-        subtitle: "Leben am Meer",
-        button: "Details anfragen",
-      },
-      {
-        title: "Städtische Penthouses",
-        img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80",
-        subtitle: "Innenstadt",
-        button: "Details anfragen",
-      },
-      {
-        title: "Moderne Rückzugsorte",
-         img: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=80",
-        subtitle: "Architektur",
-        button: "Details anfragen",
-      },
-      {
-        title: "Historische Herrenhäuser",
-        img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80",
-        subtitle: "Klassisches Design",
-        button: "Details anfragen",
-      },
-    ],
-  },
-  whyChooseUs: {
-    header: "Warum bei uns bleiben",
-    description: "Entdecken Sie, was unser Ferienrefugium am Meer wirklich außergewöhnlich macht",
-    highlights: [
-      { title: "Am Meer", icon: <IconBeach size={40} />, description: "Erstklassige Lage direkt am Strand mit atemberaubendem Meerblick und einfachem Zugang zum Strand." },
-      { title: "Ruhige Lage",icon: <IconMapPin size={40} />, description: "Ruhige Umgebung abseits der Menschenmassen, perfekt zur Entspannung." },
-      { title: "Saubere & komfortable Zimmer",icon: <IconHome size={40} />, description: "Gut gepflegte Räume für Komfort und Bequemlichkeit." },
-      { title: "Familienfreundlich",icon: <IconUsers size={40} />, description: "Sichere und einladende Umgebung für Gäste jeden Alters." },
-      { title: "Einfache Buchung", icon: <IconCalendar size={40} />, description: "Einfacher Reservierungsprozess mit flexiblen Optionen und sofortiger Bestätigung." },
-    ],
-  },
-  testimonials: {
-    header: "Was unsere Kunden sagen",
-    description: "Professioneller Service und persönliche Betreuung, die Fünf-Sterne-Erlebnisse für Gäste und Eigentümer liefert.",
-  },
-  faq: {
-    header: "Häufig gestellte Fragen",
-    description: "Alles, was Sie über unsere Premium-Management-Services und den Buchungsprozess wissen müssen.",
-    callToAction: {
-      title: "Noch Fragen?",
-      text: "Sie finden nicht, wonach Sie suchen? Chatten Sie mit unserem freundlichen Team.",
-      button: "Kontakt aufnehmen",
+  highlights: {
+  header: "Über das Haus",
+  subtitle: "Ein ruhiges Haus am Meer – ideal für Erholung, Privatsphäre und Komfort.",
+  items: [
+    {
+      title: "Nur wenige Schritte zum Meer",
+      subtitle: "LAGE",
+      description:
+        "Genießen Sie das Meer ganz in der Nähe – der Strand ist nur einen kurzen Spaziergang entfernt.",
+      img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80",
     },
-    items: [
-      {
-        q: "Wie weit im Voraus sollte ich eine Ferienwohnung buchen?",
-        a: "Wir empfehlen, mindestens 2-3 Monate im Voraus zu buchen. Für Nebensaison-Termine kann auch kurzfristig gebucht werden.",
-      },
-      {
-        q: "Übernehmen Sie Check-in und Concierge-Service?",
-        a: "Ja — wir bieten umfassende Gästeservices einschließlich Check-in, Schlüsselübergabe, Concierge für lokale Erlebnisse und 24/7 Unterstützung.",
-      },
-      {
-        q: "Können Sie mehrere Immobilien für mich verwalten?",
-        a: "Absolut — wir übernehmen die Portfoliomanagement und können Services über mehrere Immobilien skalieren, während ein konsistentes Gästeerlebnis gewährleistet bleibt.",
-      },
-      {
-        q: "Wie sieht Ihr Preismodell für Immobilienverwaltung aus?",
-        a: "Wir bieten individuelle Preise basierend auf Größe, Lage und Servicelevel. Kontaktieren Sie uns für ein maßgeschneidertes Angebot.",
-      },
-      {
-        q: "Bieten Sie Marketing- und Fotografie-Services an?",
-        a: "Ja — professionelle Fotografie, optimierte Inserate und Marketing über wichtige Kanäle gehören zu unserem Servicepaket.",
-      },
-    ],
-  },
+    {
+      title: "Ruhig & Privat",
+      subtitle: "ATMOSPHÄRE",
+      description:
+        "Eine entspannte Umgebung, perfekt für Familien, Paare und längere Aufenthalte.",
+      img: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&q=80",
+    },
+    {
+      title: "Komfortables Wohnen",
+      subtitle: "INNENBEREICH",
+      description:
+        "Helle, saubere Räume mit allem, was man für einen angenehmen Aufenthalt braucht.",
+      img: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=1200&q=80",
+    },
+  ],
+},
+
+ whyChooseUs: {
+  header: "Warum dieses Haus",
+  description:
+    "Ein ruhiges Strandhaus, in dem sich alles nach den Gezeiten, dem Licht und dem Rhythmus der Insel richtet.",
+  highlights: [
+    {
+      title: "Direkt am Strand",
+      icon: <IconBeach size={40} />,
+      description:
+        "Vom Haus aus direkt in den Sand treten und beobachten, wie die Gezeiten den Strand im Tagesverlauf verändern.",
+    },
+    {
+      title: "Ruhiges Dorfleben",
+      icon: <IconMapPin size={40} />,
+      description:
+        "Gelegen in Pwani Mchangani, einem kleinen Fischerdorf an der Ostküste Sansibars, fernab großer Resorts.",
+    },
+    {
+      title: "Großzügige, luftige Räume",
+      icon: <IconHome size={40} />,
+      description:
+        "Hohe Decken, Kingsize-Betten und natürliche Luftzirkulation sorgen für Ruhe und Komfort.",
+    },
+    {
+      title: "Ganzes Haus für Sie allein",
+      icon: <IconUsers size={40} />,
+      description:
+        "Sie mieten das komplette Haus – für Privatsphäre, Platz und ein entspanntes Wohnen ohne Gemeinschaftsbereiche.",
+    },
+    {
+      title: "Persönliche Gastgeber",
+      icon: <IconCalendar size={40} />,
+      description:
+        "Direkter Kontakt zu den Gastgebern sowie lokale Unterstützung bei Ausflügen, Massagen, Yoga oder privatem Koch.",
+    },
+  ],
+},
+
+  testimonials: {
+  header: "Erfahrungen unserer Gäste",
+  description:
+    "Eindrücke von Menschen, die hier gewohnt haben, zur Ruhe kamen und Sansibar auf ihre Weise erlebt haben.",
+},
+
+faq: {
+  header: "Häufig gestellte Fragen",
+  description:
+    "Praktische Informationen für einen entspannten und unkomplizierten Aufenthalt im Haus.",
   callToAction: {
-    badge: "Neue Immobilien für 2025 willkommen",
-    header: "Bereit, Ihr Investment-Portfolio zu steigern?",
-    description: "Schließen Sie sich Eigentümern an, die 30% mehr Umsatz mit unserer Boutique-Management-Strategie erzielen. Kein Stress, nur Ergebnisse.",
-    primaryButton: "Kostenloses Angebot anfordern",
-    secondaryButton: "Services entdecken",
+    title: "Noch Fragen?",
+    text:
+      "Falls etwas unklar ist oder Sie einen besonderen Wunsch haben, melden Sie sich gerne direkt bei uns.",
+    button: "Kontakt aufnehmen",
   },
+  items: [
+    {
+      q: "Ist das Haus privat oder wird es mit anderen Gästen geteilt?",
+      a:
+        "Das Haus wird ausschließlich privat vermietet. Sie haben das gesamte Haus für sich, ohne Gemeinschaftsbereiche.",
+    },
+    {
+      q: "Wie weit ist der Strand entfernt?",
+      a:
+        "Das Haus liegt direkt am Strand. Vom Haus aus gelangen Sie in wenigen Sekunden auf den Sand und ins Meer.",
+    },
+    {
+      q: "Wie ist die Umgebung?",
+      a:
+        "Das Haus befindet sich in Pwani Mchangani, einem kleinen Fischerdorf an der Ostküste Sansibars. Die Umgebung ist ruhig, lokal und fernab großer Resorts.",
+    },
+    {
+      q: "Eignet sich das Haus für längere Aufenthalte?",
+      a:
+        "Ja. Die großzügigen Räume, die natürliche Luftzirkulation und die ruhige Atmosphäre machen das Haus ideal für längere Aufenthalte.",
+    },
+    {
+      q: "Können zusätzliche Services organisiert werden?",
+      a:
+        "Ja. Auf Wunsch können lokale Services wie ein privater Koch, Massagen, Yoga oder Ausflüge unkompliziert organisiert werden.",
+    },
+  ],
+},
+
+  callToAction: {
+  badge: "Jetzt Buchungen für 2025",
+  header: "Bereit für eine erholsame Auszeit am Meer?",
+  description:
+    "Reservieren Sie Ihren Aufenthalt und genießen Sie ruhige Umgebung, komfortable Zimmer und direkten Strandzugang. Einfach buchen, entspannt ankommen.",
+  primaryButton: "Jetzt buchen",
+  secondaryButton: "Zimmer ansehen",
+},
+
 };

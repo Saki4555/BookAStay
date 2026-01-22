@@ -1,50 +1,34 @@
 export const TESTIMONIALS = [
   {
-    name: "Samantha Hayes",
-    location: "Maui, HI",
-    role: "Familienreisende",
+    name: "Anna & Lukas",
+    location: "Berlin, Deutschland",
+    role: "Paar",
     content:
-      "Die Buchung über Blue Coast Vacations machte unsere Familienreise mühelos – Fünf-Sterne-Service von Anfang bis Ende.",
-    fallbackText: "SH"
+      "Wir haben uns sofort wie zu Hause gefühlt. Einschlafen mit Meeresrauschen und Aufwachen mit den Gezeiten war unvergesslich.",
+    fallbackText: "AL",
   },
   {
-    name: "Diego Martinez",
-    location: "Tulum, MX",
-    role: "Eventplaner",
+    name: "Sophie M.",
+    location: "Zürich, Schweiz",
+    role: "Alleinreisende",
     content:
-      "Ein nahtloses Erlebnis. Der Concierge hat alles erledigt und unsere Gäste waren begeistert.",
-    fallbackText: "DM"
+      "Das Haus ist ruhig, schlicht und wunderschön. Genau der Ort, den ich gebraucht habe, um wirklich abzuschalten.",
+    fallbackText: "SM",
   },
   {
-    name: "Olivia Bennett",
-    location: "Santorini, GR",
-    role: "Immobilienbesitzerin",
+    name: "David & Emma",
+    location: "Amsterdam, Niederlande",
+    role: "Paar",
     content:
-      "Wir hatten eine bessere Auslastung und höhere Bewertungen, nachdem sie unser Inserat optimiert haben – sehr zu empfehlen.",
-    fallbackText: "OB"
+      "Pwani Mchangani ist authentisch und ruhig. Das Haus bot uns Privatsphäre, Raum und echtes Inselleben.",
+    fallbackText: "DE",
   },
   {
-    name: "Marcus Chen",
-    location: "Aspen, CO",
-    role: "Investment-Immobilienbesitzer",
+    name: "Marco R.",
+    location: "Mailand, Italien",
+    role: "Wiederkehrender Gast",
     content:
-      "Das Property-Management-Team nahm uns allen Stress beim Besitz einer hochwertigen Ferienimmobilie ab. Makellose Wartung und konstante Buchungen.",
-    fallbackText: "MC"
-  },
-  {
-    name: "Layla Hassan",
-    location: "Dubai, VAE",
-    role: "Luxusreisende",
-    content:
-      "Unvergessliche Reise! Unser maßgeschneiderter Reiseplan und die private Villa waren perfekt. Sie verstehen wirklich Luxusreisen.",
-    fallbackText: "LH"
-  },
-  {
-    name: "Ethan Riley",
-    location: "Cotswolds, UK",
-    role: "Feriengast",
-    content:
-      "Von der ersten Anfrage bis zum Check-out war der Ablauf transparent und einfach. Das Haus übertraf alle Erwartungen.",
-    fallbackText: "ER"
+      "Mein zweiter Aufenthalt — und sicher nicht der letzte. Licht, Luft und Einfachheit machen diesen Ort besonders.",
+    fallbackText: "MR",
   },
 ];

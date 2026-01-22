@@ -2,28 +2,32 @@
 export const ABOUT_TRANSLATIONS_DE = {
   hero: {
     badge: "Über uns",
-    title: "Über Blue Coast Vacations",
-    description: "Ihr vertrauenswürdiger Partner für Ferienvermietungen – wir liefern herausragende Gästebetreuung, leistungsstarke Inserate und sorgfältige Immobilienverwaltung für Eigentümer.",
+    title: "Boutique-Ferienvermietung neu definiert",
+    description:
+      "Blue Coast Vacations arbeitet eng mit Eigentümern zusammen, um außergewöhnliche Gästeerlebnisse, leistungsstarke Inserate und eine nachhaltige Immobilienverwaltung zu gewährleisten.",
   },
+
   stats: [
-    { value: "500+", label: "Verwaltete Immobilien" },
-    { value: "98%", label: "Zufriedene Kunden" },
-    { value: "10+", label: "Jahre Erfahrung" },
-    { value: "4.9", label: "Durchschnittliche Gästebewertung" },
+    { value: "1", label: "Strandvilla" },
+    { value: "5", label: "Schlafzimmer" },
+    { value: "4.9", label: "Gästebewertung" },
+    { value: "100%", label: "Privat & Ruhig" },
   ],
+
   story: {
-    badge: "Unsere Reise",
-    header: "Unsere Geschichte",
+    badge: "Unsere Geschichte",
+    header: "Wie dieses Haus entstanden ist",
     paragraphs: [
-      "Gegründet von Hospitality-Experten, die den Bedarf an praktischer Immobilienverwaltung erkannten, die Gästeerlebnisse verbessert, ohne den ROI der Eigentümer zu beeinträchtigen.",
-      "Wir kombinieren lokale Expertise, professionelle Fotografie und proaktive Wartung, um konsistente Fünf-Sterne-Aufenthalte und starke Einnahmen für Eigentümer zu schaffen.",
-      "Unser Team entwickelt maßgeschneiderte Pläne für jede Immobilie – von Listing-Optimierung bis zu Concierge-Services – um Rendite zu maximieren und den Wert zu erhalten.",
+      "Dieses Haus begann mit einer einfachen Idee: einen ruhigen Ort am Meer zu schaffen, an dem das Leben langsamer wird und die Natur den Rhythmus vorgibt.",
+      "In einem kleinen Fischerdorf an der Ostküste Sansibars gebaut, wurde das Haus rund um Licht, Luftzirkulation und Raum gestaltet — mit hohen Decken, offenen Räumen und natürlichen Materialien.",
+      "Wir vermieten dieses Haus persönlich als privaten Rückzugsort. Es geht nicht um Luxusservices oder Perfektion, sondern um Ruhe, Komfort und ein Gefühl von Zuhause.",
     ],
-    cta: "Kontakt aufnehmen",
+    cta: "Aufenthalt anfragen",
   },
   values: {
     header: "Das Fundament der Exzellenz",
-    description: "Wir liefern zuverlässige Ergebnisse für Eigentümer und unvergessliche Erlebnisse für Gäste durch einen konsequenten und engagierten Ansatz.",
+    description:
+      "Wir liefern zuverlässige Ergebnisse für Eigentümer und unvergessliche Erlebnisse für Gäste durch einen konsequenten und engagierten Ansatz.",
     items: [
       {
         id: "trust",

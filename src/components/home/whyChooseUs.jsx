@@ -1,87 +1,64 @@
 "use client";
 
-import {
-  IconBeach,
-  IconCalendar,
-  IconHome,
-  IconMapPin,
-  IconUsers,
-} from "@tabler/icons-react";
 import { motion } from "motion/react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function WhyChooseUs() {
   const { t } = useLanguage();
-
   const highlights = t("home.whyChooseUs.highlights");
-  const headerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 }
-  };
 
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-24 bg-muted/20">
+    <section className="py-24 px-6 md:px-12 lg:px-24 bg-muted/20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20 max-w-2xl mx-auto">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-foreground mb-4"
-            variants={headerVariants}
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-semibold text-foreground mb-6"
           >
             {t("home.whyChooseUs.header")}
           </motion.h2>
 
           <motion.p
-            className="text-lg text-muted-foreground max-w-2xl mx-auto"
-            variants={headerVariants}
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-lg text-muted-foreground leading-relaxed"
           >
             {t("home.whyChooseUs.description")}
           </motion.p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {highlights.slice(0, 4).map((h, idx) => (
+        {/* Highlights */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {highlights.map((h, idx) => (
             <motion.div
               key={idx}
-              className="group flex rounded-lg flex-col bg-card p-10 hover:shadow-2xl transition-shadow duration-300"
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{
-                delay: idx * 0.08,
-                duration: 0.5,
-                ease: [0.25, 0.4, 0.25, 1],
-              }}
+              transition={{ duration: 0.6, delay: idx * 0.08 }}
+              className="flex flex-col gap-6 bg-card rounded-xl p-10"
             >
-              {/* Icon - positioned at top */}
-              <div className="w-24 rounded-lg h-24 flex items-center justify-center bg-primary/80 text-white mb-8">
+              {/* Icon */}
+              <div className="w-14 h-14 flex items-center justify-center rounded-md bg-primary/10 text-primary">
                 {h.icon}
               </div>
 
-              {/* Title */}
-              <h3 className="text-xl font-semibold text-foreground mb-4 leading-tight">
-                {h.title}
-              </h3>
+              {/* Text */}
+              <div className="space-y-3">
+                <h3 className="text-xl font-medium text-foreground">
+                  {h.title}
+                </h3>
 
-              {/* Description */}
-              <p className="text-[15px] text-muted-foreground leading-relaxed">
-                {h.description}
-              </p>
+                <p className="text-muted-foreground leading-relaxed text-[15px]">
+                  {h.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

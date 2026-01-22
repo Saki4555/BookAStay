@@ -2,28 +2,32 @@
 export const ABOUT_TRANSLATIONS_EN = {
   hero: {
     badge: "About Us",
-    title: "About Blue Coast Vacations",
-    description: "Your trusted vacation rental partner, delivering elevated guest experiences, high-performing listings, and careful property stewardship for owners.",
+    title: "Redefining Boutique Vacation Rentals",
+    description:
+      "Blue Coast Vacations partners with owners to deliver exceptional guest experiences, high-performing listings, and hands-on property management that protects long-term value.",
   },
+
   stats: [
-    { value: "500+", label: "Properties Managed" },
-    { value: "98%", label: "Client Satisfaction" },
-    { value: "10+", label: "Years Experience" },
-    { value: "4.9", label: "Average Guest Rating" },
+    { value: "1", label: "Seaside Villa" },
+    { value: "5", label: "Bedrooms" },
+    { value: "4.9", label: "Guest Rating" },
+    { value: "100%", label: "Private & Peaceful" },
   ],
+
   story: {
-    badge: "Our Journey",
-    header: "Our Story",
+    badge: "Our Story",
+    header: "How This House Came to Be",
     paragraphs: [
-      "Founded by hospitality professionals who recognized a need for hands-on property management that elevates guest experiences without sacrificing owner ROI.",
-      "We combine local expertise, professional photography, and proactive maintenance to create consistent five-star stays and strong earnings for owners.",
-      "Our team develops tailored plans for each property — from listing optimization to concierge-grade guest services — to maximize returns and preserve value.",
+      "This house began with a simple idea: to create a quiet place by the sea where life slows down and nature leads the rhythm.",
+      "Built in a small fishing village on Zanzibar’s east coast, the house was designed around light, airflow, and space — high ceilings, open rooms, and natural materials that respond to the tides and the wind.",
+      "We host this home ourselves and offer it as a private stay, shared with care and respect. It’s not about luxury services or perfection — it’s about comfort, calm, and feeling at ease.",
     ],
-    cta: "Get in Touch",
+    cta: "Ask About Staying Here",
   },
   values: {
     header: "The Foundation of Excellence",
-    description: "We deliver dependable results for owners and unforgettable experiences for guests through a rigorous and dedicated approach.",
+    description:
+      "We deliver dependable results for owners and unforgettable experiences for guests through a rigorous and dedicated approach.",
     items: [
       {
         id: "trust",

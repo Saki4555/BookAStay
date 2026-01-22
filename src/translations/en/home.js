@@ -33,87 +33,124 @@ export const HOME_TRANSLATIONS_EN = {
       },
     ],
   },
-  collections: {
-    header: "Curated Collections",
-    subtitle: "Explore our exclusive portfolio of hand-picked properties, designed for the discerning client.",
-    items: [
-      {
-        title: "Waterfront Estates",
-        img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80",
-        subtitle: "COASTAL LIVING",
-        button: "Contact for Details",
-      },
-      {
-        title: "Urban Penthouses",
-         img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80",
-        subtitle: "CITY CENTER",
-        button: "Contact for Details",
-      },
-      {
-        title: "Modern Retreats",
-         img: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=80",
-        subtitle: "ARCHITECTURE",
-        button: "Contact for Details",
-      },
-      {
-        title: "Historic Manors",
-        img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80",
-        subtitle: "CLASSIC DESIGN",
-        button: "Contact for Details",
-      },
-    ],
-  },
-  whyChooseUs: {
-    header: "Why stay with us",
-    description: "Discover what makes our seaside retreat truly exceptional",
-    highlights: [
-      { title: "Near the Sea", icon: <IconBeach size={40} />, description: "Prime beachfront location with stunning ocean views and easy beach access." },
-      { title: "Peaceful Location",icon: <IconMapPin size={40} />, description: "Tranquil setting away from the crowds, perfect for relaxation." },
-      { title: "Clean & Comfortable Rooms",icon: <IconHome size={40} />, description: "Well-maintained spaces designed for your comfort and convenience." },
-      { title: "Family Friendly",icon: <IconUsers size={40} />, description: "Safe and welcoming environment suitable for guests of all ages." },
-      { title: "Easy Booking", icon: <IconCalendar size={40} />, description: "Simple reservation process with flexible options and instant confirmation." },
-    ],
-  },
-  testimonials: {
-    header: "What Our Clients Are Saying",
-    description: "Professional service and personalized attention, delivering five-star experiences for guests and owners alike.",
-  },
-  faq: {
-    header: "Frequently Asked Questions",
-    description: "Everything you need to know about our premium management services and booking process.",
-    callToAction: {
-      title: "Still have questions?",
-      text: "Can't find the answer you're looking for? Please chat to our friendly team.",
-      button: "Get in touch",
+ highlights: {
+  header: "About the House",
+  subtitle: "A peaceful seaside home designed for comfort, privacy, and slow living.",
+  items: [
+    {
+      title: "Steps from the Sea",
+      subtitle: "LOCATION",
+      description:
+        "Wake up to the sound of the ocean. The house is just a short walk from the beach.",
+      img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80",
     },
-    items: [
-      {
-        q: "How far in advance should I book a vacation rental?",
-        a: "We recommend booking at least 2-3 months in advance for popular destinations. However, for off-peak dates, shorter notice can be accommodated.",
-      },
-      {
-        q: "Do you handle guest check-in and concierge services?",
-        a: "Yes — we offer full guest services including check-in, key exchange, concierge for local experiences, and 24/7 support.",
-      },
-      {
-        q: "Can you manage multiple properties for me?",
-        a: "Absolutely — we handle portfolio management and can scale services across multiple properties while ensuring consistent guest experience.",
-      },
-      {
-        q: "What is your pricing model for property management?",
-        a: "We offer custom pricing based on property size, location, and the level of service. Contact us for a tailored proposal.",
-      },
-      {
-        q: "Do you offer marketing and photography services?",
-        a: "Yes — professional photography, optimized listing creation, and marketing across major channels are part of our service suite.",
-      },
-    ],
-  },
+    {
+      title: "Quiet & Private",
+      subtitle: "ATMOSPHERE",
+      description:
+        "Set in a calm neighborhood, perfect for families, couples, and long stays.",
+      img: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&q=80",
+    },
+    {
+      title: "Comfortable Living",
+      subtitle: "INTERIOR",
+      description:
+        "Clean, airy rooms with natural light and everything you need to feel at home.",
+      img: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=1200&q=80",
+    },
+  ],
+},
+
+  whyChooseUs: {
+  header: "Why this house",
+  description:
+    "A quiet beachfront home where life follows the tides, the light, and the rhythm of the island.",
+  highlights: [
+    {
+      title: "Right on the beach",
+      icon: <IconBeach size={40} />,
+      description:
+        "Step straight from the house onto the sand and watch the tides shape the shoreline throughout the day.",
+    },
+    {
+      title: "Peaceful village life",
+      icon: <IconMapPin size={40} />,
+      description:
+        "Located in Pwani Mchangani, a small fishing village on Zanzibar’s east coast, far from busy resorts.",
+    },
+    {
+      title: "Spacious & airy rooms",
+      icon: <IconHome size={40} />,
+      description:
+        "High ceilings, king-size beds, and natural airflow create a calm and comfortable living space.",
+    },
+    {
+      title: "Entire house, just for you",
+      icon: <IconUsers size={40} />,
+      description:
+        "You book the whole house, ensuring privacy, space, and a relaxed stay without shared areas.",
+    },
+    {
+      title: "Personal hosting",
+      icon: <IconCalendar size={40} />,
+      description:
+        "Direct contact with the hosts and local support for excursions, massages, yoga, or a private cook.",
+    },
+  ],
+},
+
+  testimonials: {
+  header: "Guest experiences",
+  description:
+    "Thoughts from guests who stayed, slowed down, and made the house part of their Zanzibar story.",
+},
+
+  faq: {
+  header: "Frequently Asked Questions",
+  description:
+    "Practical details to help you plan a relaxed and uncomplicated stay at the house.",
   callToAction: {
-    badge: "Accepting New Properties for 2025",
-    header: "Ready to elevate your investment portfolio?",
-    description: "Join the homeowners who earn 30% more revenue with our boutique management strategy. No stress, just results.",
-    primaryButton: "Get a Free Proposal",
-    secondaryButton: "Explore Services",
+    title: "Still have questions?",
+    text:
+      "If something isn’t clear or you have a specific request, feel free to reach out directly.",
+    button: "Get in touch",
   },
+  items: [
+    {
+      q: "Is the house rented privately or shared with others?",
+      a:
+        "The house is rented exclusively. You will have the entire property to yourself, with complete privacy and no shared spaces.",
+    },
+    {
+      q: "How far is the house from the beach?",
+      a:
+        "The house is located directly on the beach. You can step straight from the property onto the sand and reach the sea within seconds.",
+    },
+    {
+      q: "What is the area like?",
+      a:
+        "The house is located in Pwani Mchangani, a small fishing village on Zanzibar’s east coast. It is quiet, local, and far from large resorts or nightlife.",
+    },
+    {
+      q: "Is the house suitable for longer stays?",
+      a:
+        "Yes. The house is well suited for longer stays, offering spacious rooms, natural airflow, and a calm environment ideal for slowing down.",
+    },
+    {
+      q: "Can additional services be arranged?",
+      a:
+        "Yes. Upon request, local services such as a private cook, massages, yoga sessions, or excursions can be arranged in a simple and informal way.",
+    },
+  ],
+},
+
+  callToAction: {
+  badge: "Now Taking Reservations for 2025",
+  header: "Ready for a peaceful stay by the sea?",
+  description:
+    "Book your getaway and enjoy calm surroundings, comfortable rooms, and easy access to the beach. Simple booking, no hassle.",
+  primaryButton: "Book Your Stay",
+  secondaryButton: "View Rooms",
+},
+
 };

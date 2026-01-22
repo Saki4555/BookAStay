@@ -8,25 +8,22 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  CarouselApi,
 } from "@/components/ui/carousel";
 import { ArrowRight } from "lucide-react";
 import Fade from "embla-carousel-fade";
 import Autoplay from "embla-carousel-autoplay";
 import { useLanguage } from "@/context/LanguageContext";
+import { Button } from "@/components/ui/button";
 
 export default function VillaHeroCarousel() {
   const { t } = useLanguage();
-
   const slides = t("home.hero.slides");
 
   const [api, setApi] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    if (!api) {
-      return;
-    }
+    if (!api) return;
 
     setCurrentSlide(api.selectedScrollSnap());
 
@@ -37,15 +34,13 @@ export default function VillaHeroCarousel() {
 
   const scrollTo = useCallback(
     (index) => {
-      if (api) {
-        api.scrollTo(index);
-      }
+      if (api) api.scrollTo(index);
     },
     [api]
   );
 
   return (
-    <div className="relative w-full h-screen">
+    <section className="relative w-full h-screen">
       <Carousel
         setApi={setApi}
         opts={{
@@ -58,94 +53,54 @@ export default function VillaHeroCarousel() {
             delay: 4000,
           }),
         ]}
-        className="w-full"
+        className="w-full h-full"
       >
         <CarouselContent>
           {slides.map((slide, index) => (
             <CarouselItem key={index}>
-              <div className="relative h-[500px] md:h-[600px] lg:h-[700px] w-full">
+              <div className="relative w-full h-screen">
                 {/* Background Image */}
                 <div className="absolute inset-0">
                   <img
                     src={slide.image}
                     alt={slide.alt}
+                    loading="eager"
                     className="w-full h-full object-cover"
                   />
-                  {/* Overlay */}
                   <div className="absolute inset-0 bg-black/30" />
                 </div>
 
                 {/* Content */}
                 <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="flex flex-col justify-center h-full max-w-2xl">
-                    {/* Slide Numbers */}
-                    <div className="flex flex-col gap-3 mb-8 md:mb-12">
-                      <button
-                        onClick={() => scrollTo(0)}
-                        className="flex items-center gap-3 group cursor-pointer"
-                        type="button"
-                      >
-                        <div
-                          className={`h-0.5 w-12 transition-all duration-300 ${
-                            currentSlide === 0
-                              ? "bg-white"
-                              : "bg-white/30 group-hover:bg-white/50"
-                          }`}
-                        />
-                        <span
-                          className={`text-sm md:text-base transition-all duration-300 ${
-                            currentSlide === 0
-                              ? "text-white font-semibold"
-                              : "text-white/50 group-hover:text-white/70"
-                          }`}
+                  <div className="flex flex-col justify-center h-full max-w-xl">
+                    {/* Slide Navigation */}
+                    <div className="flex flex-col gap-3 mb-10 md:mb-14">
+                      {slides.map((_, i) => (
+                        <button
+                          key={i}
+                          onClick={() => scrollTo(i)}
+                          className="flex items-center gap-3 group"
+                          type="button"
+                          aria-label={`Go to slide ${i + 1}`}
                         >
-                          01
-                        </span>
-                      </button>
-                      <button
-                        onClick={() => scrollTo(1)}
-                        className="flex items-center gap-3 group cursor-pointer"
-                        type="button"
-                      >
-                        <div
-                          className={`h-0.5 w-12 transition-all duration-300 ${
-                            currentSlide === 1
-                              ? "bg-white"
-                              : "bg-white/30 group-hover:bg-white/50"
-                          }`}
-                        />
-                        <span
-                          className={`text-sm md:text-base transition-all duration-300 ${
-                            currentSlide === 1
-                              ? "text-white font-semibold"
-                              : "text-white/50 group-hover:text-white/70"
-                          }`}
-                        >
-                          02
-                        </span>
-                      </button>
-                      <button
-                        onClick={() => scrollTo(2)}
-                        className="flex items-center gap-3 group cursor-pointer"
-                        type="button"
-                      >
-                        <div
-                          className={`h-0.5 w-12 transition-all duration-300 ${
-                            currentSlide === 2
-                              ? "bg-white"
-                              : "bg-white/30 group-hover:bg-white/50"
-                          }`}
-                        />
-                        <span
-                          className={`text-sm md:text-base transition-all duration-300 ${
-                            currentSlide === 2
-                              ? "text-white font-semibold"
-                              : "text-white/50 group-hover:text-white/70"
-                          }`}
-                        >
-                          03
-                        </span>
-                      </button>
+                          <div
+                            className={`h-0.5 w-12 transition-all duration-300 ${
+                              currentSlide === i
+                                ? "bg-white"
+                                : "bg-white/30 group-hover:bg-white/50"
+                            }`}
+                          />
+                          <span
+                            className={`text-sm md:text-base transition-all duration-300 ${
+                              currentSlide === i
+                                ? "text-white font-semibold"
+                                : "text-white/50 group-hover:text-white/70"
+                            }`}
+                          >
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                        </button>
+                      ))}
                     </div>
 
                     {/* Title */}
@@ -153,13 +108,13 @@ export default function VillaHeroCarousel() {
                       {slide.title}
                     </h1>
 
-                    {/* CTA Button */}
-                    <button className="inline-flex items-center gap-3 bg-white text-gray-900 px-6 py-3 md:px-8 md:py-4 rounded font-semibold hover:bg-gray-100 transition-colors w-fit group">
+                    {/* CTA */}
+                    <Button variant="secondary" className="w-fit group">
                       <span className="text-sm md:text-base">
                         {slide.cta}
                       </span>
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -168,9 +123,9 @@ export default function VillaHeroCarousel() {
         </CarouselContent>
 
         {/* Navigation Arrows */}
-        <CarouselPrevious className="left-4  max-sm:hidden md:left-8 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm" />
+        <CarouselPrevious className="left-4 max-sm:hidden md:left-8 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm" />
         <CarouselNext className="right-4 max-sm:hidden md:right-8 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm" />
       </Carousel>
-    </div>
+    </section>
   );
 }
