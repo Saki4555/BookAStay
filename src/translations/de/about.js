@@ -24,35 +24,36 @@ export const ABOUT_TRANSLATIONS_DE = {
     ],
     cta: "Aufenthalt anfragen",
   },
-  values: {
-    header: "Das Fundament der Exzellenz",
-    description:
-      "Wir liefern zuverlässige Ergebnisse für Eigentümer und unvergessliche Erlebnisse für Gäste durch einen konsequenten und engagierten Ansatz.",
-    items: [
-      {
-        id: "trust",
-        title: "Vertrauen & Integrität",
-        desc: "Transparente Abläufe und klare Kommunikation. Wir priorisieren vorhersehbare Prozesse und ethische Partnerschaften.",
-        accent: "Gegründet 2010",
-      },
-      {
-        id: "guest",
-        title: "Gästebetreuung",
-        desc: "Proaktive Willkommensgesten und durchdachte Annehmlichkeiten schaffen unvergessliche Aufenthalte mit 5-Sterne-Bewertungen.",
-        accent: "Individuelle Aufenthalte",
-      },
-      {
-        id: "support",
-        title: "Außergewöhnlicher Support",
-        desc: "24/7-Betrieb mit schneller Reaktionszeit, lokalen Reinigungsteams und proaktiver Problemlösung.",
-        accent: "Rund um die Uhr verfügbar",
-      },
-      {
-        id: "local",
-        title: "Lokale Expertise",
-        desc: "Marktkenntnisse und Nachfrageprognosen ermöglichen uns, Preise zu optimieren und Umsatz zu steigern.",
-        accent: "Marktbasierte Strategie",
-      },
-    ],
-  },
+ values: {
+  header: "Was unser Zuhause besonders macht",
+  description:
+    "Alles, was wir tun, ist darauf ausgerichtet, einen ruhigen, komfortablen und unvergesslichen Aufenthalt zu schaffen — mit Sorgfalt, Aufmerksamkeit und lokalem Wissen.",
+  items: [
+    {
+      id: "trust",
+      title: "Vertrauen & Sorgfalt",
+      desc: "Klare Kommunikation, ehrliche Erwartungen und persönliche Betreuung, damit Sie sich vom ersten Moment an wohlfühlen.",
+      accent: "Persönlich betreut",
+    },
+    {
+      id: "guest",
+      title: "Gästekomfort",
+      desc: "Von makelloser Sauberkeit bis zu liebevollen Details — alles ist auf Entspannung und Wohlbefinden ausgelegt.",
+      accent: "Für Komfort gestaltet",
+    },
+    {
+      id: "support",
+      title: "Erreichbarkeit",
+      desc: "Wir sind für Sie da — vor der Anreise, während Ihres Aufenthalts und jederzeit bei Fragen.",
+      accent: "Jederzeit erreichbar",
+    },
+    {
+      id: "local",
+      title: "Lokales Erlebnis",
+      desc: "Ruhige Lage nahe dem Meer, ergänzt durch lokale Tipps für ein authentisches Erlebnis.",
+      accent: "Nahe am Meer",
+    },
+  ],
+},
+
 };

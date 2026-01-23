@@ -25,34 +25,35 @@ export const ABOUT_TRANSLATIONS_EN = {
     cta: "Ask About Staying Here",
   },
   values: {
-    header: "The Foundation of Excellence",
-    description:
-      "We deliver dependable results for owners and unforgettable experiences for guests through a rigorous and dedicated approach.",
-    items: [
-      {
-        id: "trust",
-        title: "Trust & Integrity",
-        desc: "Transparent operations and clear communication. We prioritize predictable processes and ethical partnerships.",
-        accent: "Established 2010",
-      },
-      {
-        id: "guest",
-        title: "Guest Experience",
-        desc: "Proactive welcome touches and thoughtful amenities create memorable stays that drive 5-star reviews.",
-        accent: "Tailored stays",
-      },
-      {
-        id: "support",
-        title: "Exceptional Support",
-        desc: "24/7 operations with fast response times, local cleaning teams, and proactive issue resolution.",
-        accent: "24/7 Availability",
-      },
-      {
-        id: "local",
-        title: "Local Expertise",
-        desc: "Market insights and demand forecasting allow us to optimize pricing and increase revenue.",
-        accent: "Market-led strategy",
-      },
-    ],
-  },
+  header: "What Makes Our Home Special",
+  description:
+    "Everything we do is focused on creating a calm, comfortable, and memorable stay — with care, attention, and local insight.",
+  items: [
+    {
+      id: "trust",
+      title: "Care & Trust",
+      desc: "Clear communication, honest expectations, and thoughtful hosting so you feel at home from the moment you arrive.",
+      accent: "Personally hosted",
+    },
+    {
+      id: "guest",
+      title: "Guest Comfort",
+      desc: "From spotless spaces to small welcome details, every element is designed for a relaxed and enjoyable stay.",
+      accent: "Designed for comfort",
+    },
+    {
+      id: "support",
+      title: "Responsive Support",
+      desc: "We are available when you need us — before arrival, during your stay, and whenever questions come up.",
+      accent: "Always reachable",
+    },
+    {
+      id: "local",
+      title: "Local Feel",
+      desc: "A peaceful setting close to the sea, with local tips to help you experience the area like a local.",
+      accent: "Near the sea",
+    },
+  ],
+},
+
 };

@@ -1,71 +1,73 @@
-// /translations/de/services.js
 export const SERVICES_TRANSLATIONS_DE = {
   hero: {
-    badge: "Dienstleistungen",
-    title: "Unsere Services",
+    badge: "Das Haus",
+    title: "Was dieses Haus bietet",
     description:
-      "Ein vollständiges Angebot an Ferienvermietungs-Dienstleistungen, um Ihrem Objekt hervorragende Gästebewertungen und stabile Einnahmen zu sichern.",
+      "Alles ist sorgfältig vorbereitet, um Ihren Aufenthalt komfortabel, unkompliziert und angenehm zu gestalten.",
   },
+
   sectionHeader: {
-    smallBadge: "UNSERE EXPERTISE",
-    title: "Ferienvermietungs-Services",
+    smallBadge: "AUSSTATTUNG & KOMFORT",
+    title: "Für einen entspannten Aufenthalt",
     description:
-      "Umfassende Services, um die Zufriedenheit Ihrer Gäste und Ihre Vermietungserträge zu maximieren – von der Optimierung von Inseraten bis zum 24/7 Gästesupport.",
+      "Vom Ankommen bis zur Abreise – jedes Detail ist darauf ausgelegt, dass Sie sich wohlfühlen.",
   },
+
   servicesGrid: [
     {
-      title: "Immobilienverwaltung",
-      desc: "Full-Service Betreuung: Reinigung, Check-ins, Inspektionen und Koordination mit Dienstleistern, damit Ihre Immobilie immer bereit für Gäste ist.",
+      title: "Das Haus",
+      desc: "Ein gepflegtes und gut vorbereitetes Zuhause, das Komfort, Sauberkeit und Sicherheit bietet.",
       features: [
-        "Professionelle Reinigung & Übergaben",
-        "Inspektion & präventive Wartung",
-        "Berichte & Auszahlungen für Eigentümer",
+        "Professionelle Reinigung vor Anreise",
+        "Regelmäßige Pflege und Kontrolle",
+        "Saubere und sichere Wohnräume",
       ],
-      cta: "Kontakt aufnehmen",
+      cta: "Aufenthalt buchen",
     },
     {
-      title: "Gästeservice",
-      desc: "Exzellenter Service für Gäste inklusive 24/7 Nachrichtenservice, Concierge-Anfragen und reibungslosen Check-ins.",
+      title: "Ihr Aufenthalt",
+      desc: "Alles ist darauf ausgelegt, Ihren Aufenthalt angenehm, einfach und stressfrei zu gestalten.",
       features: [
-        "24/7 Gästekommunikation",
-        "Self-Checkin oder persönliche Begrüßung",
-        "Concierge & lokale Empfehlungen",
+        "Einfacher Check-in und Check-out",
+        "Klare Hausinformationen",
+        "Unterstützung bei Bedarf",
       ],
-      cta: "Kontakt aufnehmen",
+      cta: "Verfügbarkeit prüfen",
     },
     {
-      title: "Einnahmen & Marketing",
-      desc: "Optimierte Preisgestaltung, professionelle Fotografie und leistungsstarke Inserate zur Steigerung von Auslastung und Übernachtungspreisen.",
+      title: "Erlebnisse",
+      desc: "Tipps und Empfehlungen für die Umgebung, damit Sie Ihre Zeit hier voll genießen können.",
       features: [
-        "Dynamische Preisgestaltung & Analysen",
-        "Inseratsoptimierung & Fotografie",
-        "Gezielte Werbeaktionen",
+        "Lokale Empfehlungen",
+        "Sehenswürdigkeiten in der Nähe",
+        "Ideen zum Entspannen und Erkunden",
       ],
-      cta: "Kontakt aufnehmen",
+      cta: "Mehr entdecken",
     },
   ],
+
   processTimeline: {
-    header: "Wie wir arbeiten",
+    header: "Ihr Aufenthalt",
     steps: [
       {
         number: 1,
-        title: "Beratung",
-        desc: "Wir evaluieren Ziele und erstellen einen individuellen Plan.",
+        title: "Buchung",
+        desc: "Wählen Sie Ihre Reisedaten und bestätigen Sie Ihren Aufenthalt.",
       },
       {
         number: 2,
-        title: "Onboarding",
-        desc: "Professionelles Onboarding und Optimierung Ihres Inserats.",
+        title: "Anreise",
+        desc: "Einfache Ankunft in ein perfekt vorbereitetes Haus.",
       },
       {
         number: 3,
-        title: "Gästebetreuung",
-        desc: "Concierge- und Gästeservices für höchste Bewertungen.",
+        title: "Genießen",
+        desc: "Entspannen Sie sich und fühlen Sie sich wie zu Hause.",
       },
       {
         number: 4,
-        title: "Kontinuierliche Optimierung",
-        desc: "Dynamische Preisgestaltung und laufende Leistungsverbesserung.",
+        title: "Abreise",
+        desc: "Reibungsloser Check-out und ein positives Erlebnis.",
       },
     ],
   },
