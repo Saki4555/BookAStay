@@ -1,71 +1,73 @@
-// /translations/en/services.js
 export const SERVICES_TRANSLATIONS_EN = {
   hero: {
-    badge: "Services",
-    title: "Our Services",
+    badge: "The House",
+    title: "What This Home Offers",
     description:
-      "A full suite of vacation rental services to help your property achieve superior guest ratings and stabilized revenue.",
+      "Everything is thoughtfully prepared to make your stay comfortable, effortless, and memorable.",
   },
+
   sectionHeader: {
-    smallBadge: "OUR EXPERTISE",
-    title: "Vacation Rental Services",
+    smallBadge: "FEATURES & COMFORT",
+    title: "Designed for a Relaxed Stay",
     description:
-      "Comprehensive services to maximize your guest satisfaction and rental returns — from listing optimization to 24/7 guest support.",
+      "From arrival to departure, every detail is set up to help you feel at home and enjoy your time here.",
   },
+
   servicesGrid: [
     {
-      title: "Property Management",
-      desc: "Full-service property care: cleaning, check-ins, inspections and vendor coordination to keep your home guest-ready.",
+      title: "The House",
+      desc: "A well-maintained, carefully prepared home designed for comfort, cleanliness, and peace of mind.",
       features: [
-        "Professional cleaning & turnovers",
-        "Inspection & preventative maintenance",
-        "Owner reporting & payouts",
+        "Professionally cleaned before arrival",
+        "Regular inspections and upkeep",
+        "Safe, well-maintained interiors",
       ],
-      cta: "Contact Us",
+      cta: "Book Your Stay",
     },
     {
-      title: "Guest Services",
-      desc: "White-glove support for guests including 24/7 messaging, concierge requests, and seamless check-ins.",
+      title: "Your Stay",
+      desc: "Everything is arranged to make your stay smooth, simple, and stress-free from start to finish.",
       features: [
-        "24/7 guest communication",
-        "Self-checkin or meet-and-greet",
-        "Concierge & local recommendations",
+        "Easy check-in and check-out",
+        "Clear house information",
+        "Support when you need it",
       ],
-      cta: "Contact Us",
+      cta: "Check Availability",
     },
     {
-      title: "Revenue & Marketing",
-      desc: "Optimized pricing, professional photography, and high-converting listings to increase occupancy and nightly rates.",
+      title: "Experiences",
+      desc: "Enjoy the surroundings with helpful local tips and nearby experiences to make your stay special.",
       features: [
-        "Dynamic pricing & analytics",
-        "Listing optimization & photography",
-        "Targeted promotions",
+        "Local recommendations",
+        "Nearby attractions",
+        "Ideas for relaxing and exploring",
       ],
-      cta: "Contact Us",
+      cta: "Discover More",
     },
   ],
+
   processTimeline: {
-    header: "How We Work",
+    header: "Your Stay, Step by Step",
     steps: [
       {
         number: 1,
-        title: "Consultation",
-        desc: "We evaluate goals and craft a customized plan.",
+        title: "Booking",
+        desc: "Select your dates and confirm your stay easily.",
       },
       {
         number: 2,
-        title: "Onboarding",
-        desc: "Professional onboarding and listing optimization.",
+        title: "Arrival",
+        desc: "Simple access and a home fully prepared for you.",
       },
       {
         number: 3,
-        title: "Guest Experience",
-        desc: "Concierge and guest services for high rating experiences.",
+        title: "Enjoy",
+        desc: "Relax, unwind, and feel at home.",
       },
       {
         number: 4,
-        title: "Continuous Optimization",
-        desc: "Dynamic pricing and ongoing performance improvement.",
+        title: "Departure",
+        desc: "Smooth check-out and a great overall experience.",
       },
     ],
   },

@@ -3,217 +3,129 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import {
-  IconChartLine,
-  IconClock,
-  IconPhone,
-  IconSettings,
-  IconUsers,
-  IconWreckingBall,
-} from "@tabler/icons-react";
 import { useLanguage } from "@/context/LanguageContext";
-
-const headerVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
+import {
+  IconHome,
+  IconKey,
+  IconSparkles,
+  IconMapPin,
+} from "@tabler/icons-react";
 
 const iconMap = {
-  "Property Management": IconSettings,
-  "Guest Services": IconUsers,
-  "Revenue & Marketing": IconChartLine,
+  "The House": IconHome,
+  "Your Stay": IconKey,
+  Experiences: IconMapPin,
 };
 
 export default function ServicesPage() {
   const { t } = useLanguage();
   const servicesData = t("services");
   const servicesGrid = t("services.servicesGrid");
+
   return (
     <main className="bg-background text-foreground">
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=80"
-            alt="Hotel managers and property maintenance team"
+            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1920&q=80"
+            alt="The house exterior"
             className="w-full h-full object-cover"
-            loading="lazy"
           />
-          <div className="absolute inset-0 bg-secondary/70" />
+          <div className="absolute inset-0 bg-background/70" />
         </div>
 
-        <div className="relative h-full max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-          <div className="flex flex-col justify-center h-full max-w-3xl">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-12 bg-primary" />
-                <span className="text-primary text-sm font-semibold tracking-wider uppercase">
-                  {servicesData.hero.badge}
-                </span>
-              </div>
+        <div className="relative h-full max-w-7xl mx-auto px-6 md:px-12 lg:px-24 flex items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="max-w-3xl"
+          >
+            <span className="text-sm uppercase tracking-wider text-primary font-semibold">
+              {servicesData.hero.badge}
+            </span>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-secondary-foreground mb-6 leading-tight">
-                {servicesData.hero.title}
-              </h1>
+            <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              {servicesData.hero.title}
+            </h1>
 
-              <p className="text-lg md:text-xl text-secondary-foreground/90 leading-relaxed max-w-2xl">
-                {servicesData.hero.description}
-              </p>
-            </motion.div>
-          </div>
+            <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
+              {servicesData.hero.description}
+            </p>
+          </motion.div>
         </div>
       </section>
-      {/* Services Grid — replaced with 3 minimal, card-style services (vacation rental landing page) */}
-      <section
-        className="relative py-20 lg:py-28 px-6 md:px-12 lg:px-24 bg-background"
-        aria-labelledby="services-heading"
-      >
+
+      {/* What Makes This House Special */}
+      <section className="py-20 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-12"
+            className="text-center max-w-3xl mx-auto mb-16"
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-3 tracking-wide">
+            <span className="text-sm uppercase tracking-wider text-primary font-semibold">
               {servicesData.sectionHeader.smallBadge}
             </span>
 
-            <h2
-              id="services-heading"
-              className="text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-3"
-            >
+            <h2 className="mt-4 text-3xl md:text-4xl font-bold">
               {servicesData.sectionHeader.title}
             </h2>
 
-            <p className="mx-auto text-base text-muted-foreground max-w-2xl leading-relaxed">
+            <p className="mt-4 text-muted-foreground">
               {servicesData.sectionHeader.description}
             </p>
           </motion.div>
 
-          {/* Local 3-item services array (only used inside this section) */}
-          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
             {servicesGrid.map((s, idx) => {
-              const Icon = iconMap[s.title] || IconSettings;
+              const Icon = iconMap[s.title] || IconSparkles;
+
               return (
                 <motion.div
                   key={s.title}
-                  initial={{ opacity: 0, y: 18 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.45, delay: idx * 0.06 }}
+                  transition={{ duration: 0.5, delay: idx * 0.08 }}
+                  className="border rounded-xl p-8 bg-card"
                 >
-                  <div
-                    className="relative h-full flex flex-col rounded-lg border border-border bg-card/80 p-6 md:p-7
-                         transition-shadow duration-200 hover:shadow-md focus-within:ring-4 focus-within:ring-primary/20"
-                  >
-                    {/* top row: icon + title */}
-                    <div className="flex items-start gap-4">
-                      <div
-                        className="flex-none w-11 h-11 rounded-md flex items-center justify-center
-                             bg-primary/10 text-primary border border-border"
-                      >
-                        <Icon className="w-5 h-5" aria-hidden />
-                      </div>
-
-                      <div className="min-w-0">
-                        <h3 className="text-lg font-semibold text-foreground">
-                          {s.title}
-                        </h3>
-                      </div>
-                    </div>
-
-                    {/* description */}
-                    <p className="mt-4 text-sm text-muted-foreground flex-1 leading-relaxed">
-                      {s.desc}
-                    </p>
-
-                    {/* features */}
-                    <ul className="mt-5 space-y-3">
-                      {s.features.map((f, i) => (
-                        <li
-                          key={i}
-                          className="flex items-start gap-3 text-sm text-muted-foreground"
-                        >
-                          <svg
-                            className="flex-none w-4 h-4 text-primary mt-1"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            aria-hidden
-                          >
-                            <path d="M20 6L9 17l-5-5" />
-                          </svg>
-                          <span>{f}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* CTA (all buttons go to /contact) */}
-                    <div className="mt-6 pt-4">
-                      <Link
-                        href="/contact"
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary text-primary-foreground
-                             py-3 px-4 text-sm font-medium transition-colors duration-200 hover:bg-primary/90"
-                      >
-                        {s.cta}
-                        <svg
-                          className="w-4 h-4"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                          />
-                        </svg>
-                      </Link>
-                    </div>
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
+                    <Icon className="w-6 h-6" />
                   </div>
+
+                  <h3 className="text-xl font-semibold mb-4">
+                    {s.title}
+                  </h3>
+
+                  <p className="text-muted-foreground mb-6">
+                    {s.desc}
+                  </p>
+
+                  <ul className="space-y-3 mb-8">
+                    {s.features.map((f, i) => (
+                      <li
+                        key={i}
+                        className="flex gap-3 text-sm text-muted-foreground"
+                      >
+                        <span className="text-primary">✓</span>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center w-full rounded-md bg-primary text-primary-foreground py-3 text-sm font-medium hover:bg-primary/90"
+                  >
+                    {s.cta}
+                  </Link>
                 </motion.div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Timeline */}
-      <section className="py-20 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24 bg-muted/20">
-        <div className="max-w-7xl mx-auto">
-          <motion.h3
-            className="text-4xl md:text-5xl font-bold text-foreground text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            {t("services.processTimeline.header")}
-          </motion.h3>
-
-          <div className="grid gap-6 grid-cols-1 md:grid-cols-4">
-            {t("services.processTimeline.steps").map((step, idx) => (
-              <div key={idx} className="bg-card p-8 rounded-lg shadow-sm text-center">
-                <div className="text-primary font-semibold text-xl mb-2">{step.number}</div>
-                <div className="font-semibold">{step.title}</div>
-                <p className="text-muted-foreground mt-2">
-                  {step.desc}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

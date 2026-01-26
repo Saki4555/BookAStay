@@ -11,6 +11,7 @@ export default function AboutPage() {
       <AboutHero />
        <StatsSection />
       <StorySection />
+      {/* //! todo: start from here */}
       <CoreValuesSection />
      
     </main>

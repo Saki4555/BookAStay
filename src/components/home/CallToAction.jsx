@@ -10,7 +10,7 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function CallToAction() {
   const { t } = useLanguage();
   return (
-    <section className="  bg-background">
+    <section className=" bg-background">
       <div className="">
         {/* Floating Dark Card */}
         <div className="relative overflow-hidden bg-secondary px-6 py-16 md:px-16 md:py-24 text-center shadow-2xl">
