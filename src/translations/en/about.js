@@ -2,53 +2,58 @@
 export const ABOUT_TRANSLATIONS_EN = {
   hero: {
     badge: "About Us",
-    title: "About Blue Coast Vacations",
-    description: "Your trusted vacation rental partner, delivering elevated guest experiences, high-performing listings, and careful property stewardship for owners.",
+    title: "Redefining Boutique Vacation Rentals",
+    description:
+      "Blue Coast Vacations partners with owners to deliver exceptional guest experiences, high-performing listings, and hands-on property management that protects long-term value.",
   },
+
   stats: [
-    { value: "500+", label: "Properties Managed" },
-    { value: "98%", label: "Client Satisfaction" },
-    { value: "10+", label: "Years Experience" },
-    { value: "4.9", label: "Average Guest Rating" },
+    { value: "1", label: "Seaside Villa" },
+    { value: "5", label: "Bedrooms" },
+    { value: "4.9", label: "Guest Rating" },
+    { value: "100%", label: "Private & Peaceful" },
   ],
+
   story: {
-    badge: "Our Journey",
-    header: "Our Story",
+    badge: "Our Story",
+    header: "How This House Came to Be",
     paragraphs: [
-      "Founded by hospitality professionals who recognized a need for hands-on property management that elevates guest experiences without sacrificing owner ROI.",
-      "We combine local expertise, professional photography, and proactive maintenance to create consistent five-star stays and strong earnings for owners.",
-      "Our team develops tailored plans for each property — from listing optimization to concierge-grade guest services — to maximize returns and preserve value.",
+      "This house began with a simple idea: to create a quiet place by the sea where life slows down and nature leads the rhythm.",
+      "Built in a small fishing village on Zanzibar’s east coast, the house was designed around light, airflow, and space — high ceilings, open rooms, and natural materials that respond to the tides and the wind.",
+      "We host this home ourselves and offer it as a private stay, shared with care and respect. It’s not about luxury services or perfection — it’s about comfort, calm, and feeling at ease.",
     ],
-    cta: "Get in Touch",
+    cta: "Ask About Staying Here",
   },
   values: {
-    header: "The Foundation of Excellence",
-    description: "We deliver dependable results for owners and unforgettable experiences for guests through a rigorous and dedicated approach.",
-    items: [
-      {
-        id: "trust",
-        title: "Trust & Integrity",
-        desc: "Transparent operations and clear communication. We prioritize predictable processes and ethical partnerships.",
-        accent: "Established 2010",
-      },
-      {
-        id: "guest",
-        title: "Guest Experience",
-        desc: "Proactive welcome touches and thoughtful amenities create memorable stays that drive 5-star reviews.",
-        accent: "Tailored stays",
-      },
-      {
-        id: "support",
-        title: "Exceptional Support",
-        desc: "24/7 operations with fast response times, local cleaning teams, and proactive issue resolution.",
-        accent: "24/7 Availability",
-      },
-      {
-        id: "local",
-        title: "Local Expertise",
-        desc: "Market insights and demand forecasting allow us to optimize pricing and increase revenue.",
-        accent: "Market-led strategy",
-      },
-    ],
-  },
+  header: "What Makes Our Home Special",
+  description:
+    "Everything we do is focused on creating a calm, comfortable, and memorable stay — with care, attention, and local insight.",
+  items: [
+    {
+      id: "trust",
+      title: "Care & Trust",
+      desc: "Clear communication, honest expectations, and thoughtful hosting so you feel at home from the moment you arrive.",
+      accent: "Personally hosted",
+    },
+    {
+      id: "guest",
+      title: "Guest Comfort",
+      desc: "From spotless spaces to small welcome details, every element is designed for a relaxed and enjoyable stay.",
+      accent: "Designed for comfort",
+    },
+    {
+      id: "support",
+      title: "Responsive Support",
+      desc: "We are available when you need us — before arrival, during your stay, and whenever questions come up.",
+      accent: "Always reachable",
+    },
+    {
+      id: "local",
+      title: "Local Feel",
+      desc: "A peaceful setting close to the sea, with local tips to help you experience the area like a local.",
+      accent: "Near the sea",
+    },
+  ],
+},
+
 };
