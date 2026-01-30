@@ -1,52 +1,67 @@
 export const galleryImages = [
-  {
-    id: 1,
-    src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop',
-    title: 'A beautiful lake',
-    caption: 'Body of water surrounded by trees',
-    thumbnail: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop',
-  },
-  {
-    id: 2,
-    src: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop',
-    title: 'Gray laptop computer',
-    caption: 'A sleek gray laptop on a white desk with minimal setup.',
-    thumbnail: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop',
-  },
-  {
-    id: 3,
-    src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
-    title: 'Circuit board macro',
-    caption: 'A close-up macro shot of a circuit board showing electronic components.',
-    thumbnail: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop',
-  },
-  {
-    id: 4,
-    src: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop',
-    title: 'Mountain landscape',
-    caption: 'Scenic view of snow-capped mountains under a clear sky.',
-    thumbnail: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop',
-  },
-  {
-    id: 5,
-    src: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=800&h=600&fit=crop',
-    title: 'Starry night',
-    caption: 'A breathtaking night sky full of stars in a remote area.',
-    thumbnail: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop',
-  },
-  {
-    id: 6,
-    src: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800&h=600&fit=crop',
-    title: 'Ocean wave',
-    caption: 'Powerful ocean wave crashing with energy and movement.',
-    thumbnail: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&h=300&fit=crop',
-  },
-  {
-    id: 7,
-    src: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=800&h=600&fit=crop',
-    title: 'Modern architecture',
-    caption: 'Abstract and clean lines of a modern architectural structure.',
-    thumbnail: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop',
-  },
-  
-]
+  { id: 1, key: "beachfront_purity", src: "/assets/1.webp", thumbnail: "/assets/1.webp" },
+  { id: 2, key: "morning_glow", src: "/assets/2.webp", thumbnail: "/assets/2.webp" },
+  { id: 3, key: "palm_canopy", src: "/assets/3.webp", thumbnail: "/assets/3.webp" },
+  { id: 4, key: "sand_textures", src: "/assets/4.webp", thumbnail: "/assets/4.webp" },
+  { id: 5, key: "azure_horizons", src: "/assets/5.webp", thumbnail: "/assets/5.webp" },
+  { id: 6, key: "traditional_architecture", src: "/assets/6.webp", thumbnail: "/assets/6.webp" },
+  { id: 7, key: "veranda_breeze", src: "/assets/7.webp", thumbnail: "/assets/7.webp" },
+  { id: 8, key: "tropical_garden_path", src: "/assets/8.webp", thumbnail: "/assets/8.webp" },
+  { id: 9, key: "infinite_ocean_view", src: "/assets/9.webp", thumbnail: "/assets/9.webp" },
+  { id: 10, key: "local_fishing_boats", src: "/assets/10.webp", thumbnail: "/assets/10.webp" },
+  { id: 11, key: "sunset_serenade", src: "/assets/11.webp", thumbnail: "/assets/11.webp" },
+  { id: 12, key: "lounge_comfort", src: "/assets/12.webp", thumbnail: "/assets/12.webp" },
+  { id: 13, key: "carved_doorways", src: "/assets/13.webp", thumbnail: "/assets/13.webp" },
+  { id: 14, key: "turquoise_tides", src: "/assets/14.webp", thumbnail: "/assets/14.webp" },
+  { id: 15, key: "starlit_evenings", src: "/assets/15.webp", thumbnail: "/assets/15.webp" },
+  { id: 16, key: "artisanal_details", src: "/assets/16.webp", thumbnail: "/assets/16.webp" },
+  { id: 17, key: "airy_living_room", src: "/assets/17.webp", thumbnail: "/assets/17.webp" },
+  { id: 18, key: "marine_life", src: "/assets/18.webp", thumbnail: "/assets/18.webp" },
+  { id: 19, key: "serene_shores", src: "/assets/19.webp", thumbnail: "/assets/19.webp" },
+  { id: 20, key: "beach_coastline", src: "/assets/20.webp", thumbnail: "/assets/20.webp" },
+  { id: 21, key: "tidal_living", src: "/assets/21.webp", thumbnail: "/assets/21.webp" },
+  { id: 22, key: "coastal_serenity", src: "/assets/22.webp", thumbnail: "/assets/22.webp" },
+  { id: 23, key: "white_sand_shores", src: "/assets/23.webp", thumbnail: "/assets/23.webp" },
+  { id: 24, key: "kitchen_flavors", src: "/assets/24.webp", thumbnail: "/assets/24.webp" },
+  { id: 25, key: "poolside_relaxation", src: "/assets/25.webp", thumbnail: "/assets/25.webp" },
+  { id: 26, key: "authentic_craft", src: "/assets/26.webp", thumbnail: "/assets/26.webp" },
+  { id: 27, key: "white_sand_beach", src: "/assets/27.webp", thumbnail: "/assets/27.webp" },
+  { id: 28, key: "modern_kitchen", src: "/assets/28.webp", thumbnail: "/assets/28.webp" },
+  { id: 29, key: "poolside_panorama", src: "/assets/29.webp", thumbnail: "/assets/29.webp" },
+  { id: 30, key: "artisanal_decor", src: "/assets/30.webp", thumbnail: "/assets/30.webp" },
+  { id: 31, key: "cultural_artifacts", src: "/assets/31.webp", thumbnail: "/assets/31.webp" },
+  { id: 32, key: "reclaimed_bedroom", src: "/assets/32.webp", thumbnail: "/assets/32.webp" },
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

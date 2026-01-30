@@ -1,15 +1,9 @@
 export const FOOTER_TRANSLATIONS = {
-  company: "Blue Coast Vacations",
+  name: "Winds of Zanzibar",
   description:
-    "Unvergessliche Aufenthalte in den besten Reisezielen weltweit. Boutique-Immobilienverwaltung und Gästeservices.",
-  quickLinks: "Schnellzugriff",
+    "Ein ruhiges Haus am Meer in Pwani Mchangani – geprägt von Gezeiten, Licht und langsamen Tagen.",
   contact: "Kontakt",
-  businessHours: "Öffnungszeiten",
-  hours: {
-    monFri: "Mo - Fr: 9:00 - 18:00",
-    sat: "Sa: 10:00 - 15:00",
-    sun: "So: Geschlossen",
-  },
+  instagram: "Instagram",
+  email: "E-Mail",
   copyright: "Alle Rechte vorbehalten",
-  madeWithCare: "Mit Liebe gemacht • Datenschutzerklärung",
 };

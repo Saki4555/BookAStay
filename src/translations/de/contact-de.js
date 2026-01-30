@@ -1,72 +1,39 @@
 // /translations/de/contact.js
 export const CONTACT_TRANSLATIONS_DE = {
-  hero: {
-    badge: "Kontakt aufnehmen",
-    title: "In Verbindung treten",
-    description:
-      "Bereit, Ihr Ferienvermietungsgeschäft zu transformieren? Lassen Sie uns besprechen, wie wir das Potenzial Ihrer Immobilie maximieren können.",
+hero: {
+  badge: "Kontakt",
+  title: "Plant euren Aufenthalt",
+  description:
+    "Fragen, Wünsche oder besondere Ideen — wir sind gerne für euch da.",
+},
+
+  location: {
+    badge: "Lage",
+    title: "Wo wir sind",
+    address: {
+      title: "Pwani Mchangani, Sansibar",
+      line1: "Direkt am Meer",
+      line2: "Ostküste von Sansibar",
+    },
+    note: "Google Maps-Standort folgt in Kürze – wir teilen den genauen Pin, sobald er bestätigt ist.",
   },
-  contactInfo: [
-    {
-      title: "Rufen Sie uns an",
-      detail: "+1 (805) 555-0123",
-      subDetail: "Mo-Fr, 9-18 Uhr PST",
-      link: "tel:+18055550123",
+  booking: {
+    badge: "Wie buchen",
+    title: "Bucht euren Aufenthalt",
+    intro: "Ihr könnt das ganze Haus gerne direkt bei uns buchen – schreibt uns einfach über Instagram oder per E-Mail.",
+    pricing: {
+      highSeason: {
+        label: "Hochsaison",
+        price: "USD 250 pro Nacht",
+        dates: "Oktober – März",
+      },
+      lowSeason: {
+        label: "Nebensaison",
+        price: "USD 190 pro Nacht",
+        dates: "April – September",
+      },
     },
-    {
-      title: "Schreiben Sie uns",
-      detail: "hello@bluecoastvacations.com",
-      subDetail: "Wir antworten innerhalb von 24 Stunden",
-      link: "mailto:hello@bluecoastvacations.com",
-    },
-    {
-      title: "Besuchen Sie uns",
-      detail: "123 Seaside Avenue",
-      subDetail: "Santa Barbara, CA 93101",
-      link: "https://maps.google.com/?q=Santa+Barbara+CA",
-    },
-  ],
-  form: {
-    header: "Schreiben Sie uns eine Nachricht",
-    description: "Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden bei Ihnen.",
-    labels: {
-      name: "Vollständiger Name *",
-      email: "E-Mail-Adresse *",
-      phone: "Telefonnummer",
-      subject: "Betreff",
-      message: "Ihre Nachricht *",
-    },
-    placeholders: {
-      name: "Max Mustermann",
-      email: "max@example.com",
-      phone: "+1 (555) 000-0000",
-      subject: "Wie können wir Ihnen helfen?",
-      message: "Erzählen Sie uns von Ihrer Ferienimmobilie und Ihren Zielen...",
-    },
-    button: {
-      send: "Nachricht senden",
-      processing: "Wird gesendet...",
-      sent: "Nachricht gesendet!",
-    },
-    confirmation: {
-      title: "✓ Vielen Dank für Ihre Nachricht!",
-      description: "Wir haben Ihre Nachricht erhalten und melden uns innerhalb von 24 Stunden bei Ihnen.",
-    },
-  },
-  sidebar: {
-    hours: {
-      title: "Öffnungszeiten",
-      schedule: [
-        { day: "Montag - Freitag", time: "9:00 - 18:00 Uhr" },
-        { day: "Samstag", time: "10:00 - 15:00 Uhr" },
-        { day: "Sonntag", time: "Geschlossen", highlight: true },
-      ],
-      note:
-        "Hinweis: Für bestehende Kunden stehen wir auch rund um die Uhr für Notfälle zur Verfügung.",
-    },
-    map: {
-      title: "Finden Sie uns",
-      address: "123 Seaside Avenue, Santa Barbara, CA 93101",
-    },
+    contactTitle: "Kontaktiert uns über:",
+    footer: "Falls ihr Fragen zum Haus, zur Location oder zur Logistik habt, meldet euch jederzeit – wir helfen euch gerne, damit euer Aufenthalt so entspannt und unvergesslich wie möglich wird!",
   },
 };

@@ -9,10 +9,10 @@ export default function AboutPage() {
   return (
     <main className="bg-background text-foreground">
       <AboutHero />
-       <StatsSection />
+       
       <StorySection />
-      {/* //! todo: start from here */}
-      <CoreValuesSection />
+      
+      
      
     </main>
   );

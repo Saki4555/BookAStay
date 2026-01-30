@@ -1,11 +1,13 @@
-// /translations/en/about.js
+
 export const ABOUT_TRANSLATIONS_EN = {
-  hero: {
-    badge: "About Us",
-    title: "Redefining Boutique Vacation Rentals",
-    description:
-      "Blue Coast Vacations partners with owners to deliver exceptional guest experiences, high-performing listings, and hands-on property management that protects long-term value.",
-  },
+
+hero: {
+  badge: "Our Story",
+  title: "Living with the Tides",
+  description:
+    "Since 2021, we’ve lived here on and off, shaped by the tides, the village, and the quiet rhythm of the days.",
+},
+
 
   stats: [
     { value: "1", label: "Seaside Villa" },
@@ -14,16 +16,18 @@ export const ABOUT_TRANSLATIONS_EN = {
     { value: "100%", label: "Private & Peaceful" },
   ],
 
-  story: {
-    badge: "Our Story",
-    header: "How This House Came to Be",
-    paragraphs: [
-      "This house began with a simple idea: to create a quiet place by the sea where life slows down and nature leads the rhythm.",
-      "Built in a small fishing village on Zanzibar’s east coast, the house was designed around light, airflow, and space — high ceilings, open rooms, and natural materials that respond to the tides and the wind.",
-      "We host this home ourselves and offer it as a private stay, shared with care and respect. It’s not about luxury services or perfection — it’s about comfort, calm, and feeling at ease.",
-    ],
-    cta: "Ask About Staying Here",
-  },
+ // English
+story: {
+  badge: "About the House",
+  header: "Your Home by the Sea",
+  paragraphs: [
+    "Our house is located on the stunning east coast of Zanzibar, right by the sea, in the small and authentic fishing village of Pwani Mchangani. Here you can enjoy peace and quiet, experience the real island life, and simply unwind.",
+    "The house features two spacious bedrooms with a total of three king-size beds and two bathrooms. The three-meter-high ceilings give all rooms a sense of openness and create a light, airy, and relaxing atmosphere. The house was built using local craftsmanship and materials, and the furniture is made from reclaimed Dhow wood, lovingly upcycled on site.",
+    "A special highlight is the large swimming pool with beautiful sea views, perfect for both adults and children to relax and enjoy. The large, fully equipped kitchen is perfect for cooking for yourself, or a cook can be arranged on request.",
+    "Having established strong local connections, we are happy to assist with organizing excursions, massages, or yoga sessions, making sure your stay is as relaxing and enjoyable as possible.",
+  ],
+  cta: "Book Your Stay",
+},
   values: {
   header: "What Makes Our Home Special",
   description:

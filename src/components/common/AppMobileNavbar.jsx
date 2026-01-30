@@ -59,13 +59,13 @@ const AppMobileNavbar = () => {
         ) : (
           <div className="animate-fade-up relative flex items-center gap-3 transition-all duration-300 md:static">
             {/* logo */}
-            <a href="https://www.codevertiser.com/" className="flex items-center gap-3">
+            {/* <a href="https://www.codevertiser.com/" className="flex items-center gap-3">
               <img
                 src="https://res.cloudinary.com/dyvkdwzcj/image/upload/v1709055594/logo-1_vo1dni.png"
                 className="h-8"
                 alt="Logo"
               />
-            </a>
+            </a> */}
             <span className={cn("text-white", isScrolled && "text-muted-foreground")}>BookAStay</span>
           </div>
         )}

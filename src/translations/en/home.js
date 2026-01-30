@@ -13,50 +13,53 @@ export const HOME_TRANSLATIONS_EN = {
       {
         title: "Finest holiday villa rental collection",
          image:
-        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920&q=80",
+        "/assets/19.webp",
         alt: "Luxury villa with ocean view",
         cta: "FIND YOUR VILLA",
       },
       {
         title: "Experience luxury living by the sea",
          image:
-        "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=80",
+        "/assets/20.webp",
         alt: "Modern villa interior",
         cta: "FIND YOUR VILLA",
       },
       {
         title: "Your perfect getaway awaits",
          image:
-        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80",
+        "/assets/29.webp",
         alt: "Villa with pool at sunset",
         cta: "FIND YOUR VILLA",
       },
     ],
   },
  highlights: {
-  header: "About the House",
-  subtitle: "A peaceful seaside home designed for comfort, privacy, and slow living.",
+  header: "Our House by the Sea",
+  subtitle: "A quiet home by the sea, shaped for comfort, privacy, and unhurried days.",
   items: [
     {
       title: "Steps from the Sea",
-      subtitle: "LOCATION",
+      
       description:
-        "Wake up to the sound of the ocean. The house is just a short walk from the beach.",
-      img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80",
+        "The sea is always close. You hear the waves in the morning and reach the beach in just a few steps.",
+      img: "/assets/32.webp",
+      subtitle: "ARCHITECTURE"
     },
     {
       title: "Quiet & Private",
-      subtitle: "ATMOSPHERE",
+      
       description:
-        "Set in a calm neighborhood, perfect for families, couples, and long stays.",
-      img: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&q=80",
+        "Set in a small, quiet neighborhood where days are slow and privacy comes naturally.",
+      img: "/assets/16.webp",
+      subtitle: "CRAFTSMANSHIP"
     },
     {
       title: "Comfortable Living",
-      subtitle: "INTERIOR",
+      
       description:
-        "Clean, airy rooms with natural light and everything you need to feel at home.",
-      img: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=1200&q=80",
+        "Light-filled rooms, high ceilings, and simple spaces designed to feel easy and lived-in.",
+      img: "/assets/20.webp",
+      subtitle: "LOCATION",
     },
   ],
 },
