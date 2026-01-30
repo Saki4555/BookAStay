@@ -1,11 +1,12 @@
-// /translations/de/about.js
+
 export const ABOUT_TRANSLATIONS_DE = {
-  hero: {
-    badge: "Über uns",
-    title: "Boutique-Ferienvermietung neu definiert",
-    description:
-      "Blue Coast Vacations arbeitet eng mit Eigentümern zusammen, um außergewöhnliche Gästeerlebnisse, leistungsstarke Inserate und eine nachhaltige Immobilienverwaltung zu gewährleisten.",
-  },
+
+hero: {
+  badge: "Unsere Geschichte",
+  title: "Leben mit den Gezeiten",
+  description:
+    "Seit 2021 leben wir hier abwechselnd – geprägt von den Gezeiten, dem Dorf und dem ruhigen Rhythmus der Tage.",
+},
 
   stats: [
     { value: "1", label: "Strandvilla" },
@@ -14,16 +15,18 @@ export const ABOUT_TRANSLATIONS_DE = {
     { value: "100%", label: "Privat & Ruhig" },
   ],
 
-  story: {
-    badge: "Unsere Geschichte",
-    header: "Wie dieses Haus entstanden ist",
-    paragraphs: [
-      "Dieses Haus begann mit einer einfachen Idee: einen ruhigen Ort am Meer zu schaffen, an dem das Leben langsamer wird und die Natur den Rhythmus vorgibt.",
-      "In einem kleinen Fischerdorf an der Ostküste Sansibars gebaut, wurde das Haus rund um Licht, Luftzirkulation und Raum gestaltet — mit hohen Decken, offenen Räumen und natürlichen Materialien.",
-      "Wir vermieten dieses Haus persönlich als privaten Rückzugsort. Es geht nicht um Luxusservices oder Perfektion, sondern um Ruhe, Komfort und ein Gefühl von Zuhause.",
-    ],
-    cta: "Aufenthalt anfragen",
-  },
+  // German
+story: {
+  badge: "Über das Haus",
+  header: "Euer Zuhause am Meer",
+  paragraphs: [
+    "Unser Haus liegt an der traumhaften Ostküste Sansibars, direkt am Meer, im kleinen und authentischen Fischerdorf Pwani Mchangani. Hier könnt ihr die Ruhe genießen, das echte Inselleben erleben und einfach abschalten.",
+    "Das Haus verfügt über zwei großzügige Schlafzimmer mit insgesamt drei King-Size-Betten sowie zwei Bäder. Die drei Meter hohen Decken verleihen allen Räumen eine angenehme Weite und sorgen für ein luftiges Wohlfühlerlebnis. Beim Bau des Hauses wurde ausschließlich mit lokalem Handwerk und regionalen Materialien gearbeitet. Die Möbel sind aus gebrauchtem Dhow-Holz gefertigt, das vor Ort liebevoll upgecycelt wurde.",
+    "Ein besonderes Highlight ist der große Swimmingpool mit wunderschönem Blick auf das Meer, der bei Groß und Klein gleichermaßen beliebt ist. Die große, gut ausgestattete Küche eignet sich perfekt zum Selberkochen, alternativ kann auf Wunsch auch eine Köchin organisiert werden.",
+    "Da wir in der Gegend mittlerweile sehr gut vernetzt sind, helfen wir euch gerne bei der Organisation von Ausflügen, Massagen oder Yoga-Sessions, damit ihr euren Aufenthalt entspannt und ganz nach euren Wünschen gestalten könnt.",
+  ],
+  cta: "Aufenthalt buchen",
+},
  values: {
   header: "Was unser Zuhause besonders macht",
   description:

@@ -18,6 +18,8 @@ import { FOOTER_TRANSLATIONS as FOOTER_TRANSLATIONS_DE } from "@/translations/de
 import { TESTIMONIALS as TESTIMONIALS_DE } from "@/translations/de/testimonials";
 import { CONTACT_TRANSLATIONS_DE } from "@/translations/de/contact-de";
 import { SERVICES_TRANSLATIONS_DE } from "@/translations/de/services-de";
+import { GALLERY_TRANSLATIONS_EN } from "@/translations/en/gallery";
+import { GALLERY_TRANSLATIONS_DE } from "@/translations/de/gallery";
 
 const LanguageContext = createContext();
 
@@ -30,6 +32,7 @@ const translations = {
     testimonials: TESTIMONIALS_EN,
     contact: CONTACT_TRANSLATIONS_EN,
     services: SERVICES_TRANSLATIONS_EN,
+    gallery: GALLERY_TRANSLATIONS_EN,
   },
   de: {
     home: HOME_TRANSLATIONS_DE,
@@ -39,6 +42,7 @@ const translations = {
     testimonials: TESTIMONIALS_DE,
     contact: CONTACT_TRANSLATIONS_DE,
     services: SERVICES_TRANSLATIONS_DE,
+    gallery: GALLERY_TRANSLATIONS_DE
   },
 };
 

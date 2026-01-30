@@ -13,53 +13,54 @@ export const HOME_TRANSLATIONS_DE = {
       {
         title: "Exklusive Ferienvilla-Vermietung",
          image:
-        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920&q=80",
+        "/assets/19.webp",
         alt: "Luxusvilla mit Meerblick",
         cta: "VILLA FINDEN",
       },
       {
         title: "Erleben Sie luxuriöses Leben am Meer",
         image:
-        "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=80",
+        "/assets/20.webp",
         alt: "Modernes Villeninterieur",
         cta: "VILLA FINDEN",
       },
       {
         title: "Ihr perfekter Urlaub wartet",
          image:
-        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80",
+        "/assets/29.webp",
         alt: "Villa mit Pool bei Sonnenuntergang",
         cta: "VILLA FINDEN",
       },
     ],
   },
-  highlights: {
-  header: "Über das Haus",
-  subtitle: "Ein ruhiges Haus am Meer – ideal für Erholung, Privatsphäre und Komfort.",
+highlights: {
+  header: "Unser Haus am Meer",
+  subtitle: "Ein ruhiges Zuhause am Meer – gestaltet für Komfort, Privatsphäre und entschleunigte Tage.",
   items: [
     {
-      title: "Nur wenige Schritte zum Meer",
-      subtitle: "LAGE",
+      title: "Nur Schritte vom Meer entfernt",
       description:
-        "Genießen Sie das Meer ganz in der Nähe – der Strand ist nur einen kurzen Spaziergang entfernt.",
-      img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80",
+        "Das Meer ist immer nah. Morgens hört man die Wellen und erreicht den Strand in nur wenigen Schritten.",
+      img: "/assets/32.webp",
+      subtitle: "ARCHITEKTUR"
     },
     {
       title: "Ruhig & Privat",
-      subtitle: "ATMOSPHÄRE",
       description:
-        "Eine entspannte Umgebung, perfekt für Familien, Paare und längere Aufenthalte.",
-      img: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&q=80",
+        "Gelegen in einer kleinen, ruhigen Nachbarschaft, in der die Tage langsam vergehen und Privatsphäre selbstverständlich ist.",
+      img: "/assets/16.webp",
+      subtitle: "HANDWERK"
     },
     {
       title: "Komfortables Wohnen",
-      subtitle: "INNENBEREICH",
       description:
-        "Helle, saubere Räume mit allem, was man für einen angenehmen Aufenthalt braucht.",
-      img: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=1200&q=80",
+        "Lichtdurchflutete Räume, hohe Decken und schlichte Bereiche, die sich leicht und wohnlich anfühlen.",
+      img: "/assets/20.webp",
+      subtitle: "LAGE"
     },
   ],
 },
+
 
  whyChooseUs: {
   header: "Warum dieses Haus",
