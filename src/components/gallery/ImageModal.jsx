@@ -40,7 +40,7 @@ const ImageModal = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black/50 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4 overflow-hidden"
       onClick={onClose}
     >
       <motion.div
@@ -49,10 +49,10 @@ const ImageModal = ({
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
         transition={{ duration: 0.2 }}
-        className="relative mx-4 w-full max-w-4xl overflow-hidden rounded-lg bg-white"
+        className="relative w-full max-w-5xl max-h-[calc(100vh-2rem)] overflow-hidden rounded-lg bg-white flex flex-col"
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-gray-100 px-4 py-1.5">
+        <div className="flex items-center justify-between border-b border-gray-100 px-4 py-2 flex-shrink-0">
           <span className="text-sm text-gray-500">
             {currentIndex + 1} / {images.length}
           </span>
@@ -93,8 +93,7 @@ const ImageModal = ({
         <div
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
-          className="relative flex w-full items-center justify-center overflow-hidden bg-black"
-          style={{ maxHeight: '65vh' }}
+          className="relative flex w-full items-center justify-center overflow-hidden bg-black flex-1 min-h-0"
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.img
@@ -111,13 +110,13 @@ const ImageModal = ({
                 opacity: 0,
               }}
               transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className="h-auto max-h-[70vh] w-auto object-contain"
+              className="h-full w-full object-fit"
             />
           </AnimatePresence>
         </div>
 
         {/* Caption */}
-        <div className="p-4">
+        <div className="px-4 py-3 flex-shrink-0">
           <h3 className="text-lg font-semibold">{image.title}</h3>
           {image.caption && (
             <p className="mt-1 text-sm text-gray-600">{image.caption}</p>
@@ -125,14 +124,14 @@ const ImageModal = ({
         </div>
 
         {/* Thumbnails */}
-        <div className="flex items-center justify-center gap-2 overflow-x-auto border-t border-gray-100 p-4">
+        <div className="flex items-center justify-center gap-2 overflow-x-auto border-t border-gray-100 px-4 py-3 flex-shrink-0">
           {images.map((img, i) => (
             <img
               key={i}
               src={img.thumbnail}
               alt={`Thumbnail ${i}`}
               onClick={() => onSelect(i)}
-              className={`h-16 w-24 cursor-pointer rounded border object-cover transition ${
+              className={`h-14 w-20 cursor-pointer rounded border object-cover  transition flex-shrink-0 ${
                 i === currentIndex
                   ? 'border-blue-500 ring-2 ring-blue-400'
                   : 'border-gray-200'

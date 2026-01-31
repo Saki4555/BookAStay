@@ -28,7 +28,7 @@ const GalleryHero = () => {
       </motion.div>
 
       {/* Modern Gradient Mask: Darker on text side, clearer on image side */}
-      <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 via-secondary/5 to-transparent" />
       
       {/* Subtle bottom shadow for transition to next section */}
       <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
@@ -73,13 +73,13 @@ const GalleryHero = () => {
             </motion.h1>
 
             {/* Description: High Readability */}
-            <motion.p 
+            {/* <motion.p 
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
               transition={{ duration: 0.8, ease: easeOutExpo }}
               className="text-xs sm:text-sm md:text-base lg:text-lg text-white/80 leading-relaxed max-w-2xl font-light"
             >
               {heroData.description}
-            </motion.p>
+            </motion.p> */}
           </motion.div>
         </div>
       </div>

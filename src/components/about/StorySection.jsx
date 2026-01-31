@@ -78,7 +78,7 @@ const StorySection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="hidden lg:block absolute top-12 -left-12 z-20 text-6xl xl:text-7xl font-serif text-foreground leading-none max-w-lg drop-shadow-sm"
             >
-              {story.header}
+              {story.header}  
             </motion.h2>
 
             {/* Main Image Container with Arch Shape */}
@@ -90,13 +90,13 @@ const StorySection = () => {
               className="relative w-full h-[500px] lg:h-[700px] shadow-2xl"
             >
               <img 
-                src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=1288&auto=format&fit=crop" 
+                src="/assets/27.webp" 
                 alt="Winds of Zanzibar Architecture" 
                 className="w-full h-full object-cover"
               />
               
               {/* Overlay Gradient for Text Readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none" />
               
               {/* Floating "Stamp" Animation */}
               {/* FIX 3: Moved to right-4 (inside the container) to prevent clipping */}

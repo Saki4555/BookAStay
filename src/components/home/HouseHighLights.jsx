@@ -25,23 +25,8 @@ export default function HouseHighlights() {
             {t("home.highlights.header")}
           </motion.h2>
 
-          <motion.div
-            initial={{ opacity: 0, scaleX: 0 }}
-            whileInView={{ opacity: 1, scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="h-px w-12 sm:w-16 bg-primary mx-auto"
-          />
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-muted-foreground text-sm sm:text-base md:text-lg font-light leading-relaxed px-4 sm:px-0"
-          >
-            {t("home.highlights.subtitle")}
-          </motion.p>
+         
+         
         </div>
 
         {/* Responsive Grid Layout */}
@@ -54,7 +39,7 @@ export default function HouseHighlights() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className={cn(
-                "group relative overflow-hidden rounded-xl cursor-pointer bg-secondary",
+                "group relative overflow-hidden rounded-md cursor-pointer bg-secondary",
                 // Mobile: all cards same height (280px), Tablet+: main card spans 2 columns and rows
                 idx === 0 
                   ? "h-[280px] sm:h-[320px] md:col-span-2 md:row-span-2 md:h-auto" 
@@ -81,24 +66,24 @@ export default function HouseHighlights() {
 
                   <div className="flex items-end justify-between gap-2 sm:gap-3">
                     <div className="space-y-0.5">
-                      <h3 className={cn(
+                      {/* <h3 className={cn(
                         "font-light text-white tracking-wide",
                         idx === 0 
                           ? "text-xl sm:text-2xl md:text-3xl" 
                           : "text-lg sm:text-xl"
                       )}>
                         {item.title}
-                      </h3>
+                      </h3> */}
                       
                       {/* Description - Responsive & Hidden on very small screens for non-main cards */}
-                      <div className={cn(
+                      {/* <div className={cn(
                         "grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500",
                         idx !== 0 && "hidden sm:grid"
                       )}>
                         <p className="overflow-hidden text-xs sm:text-[13px] text-white/80 leading-snug font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                            {item.description}
                         </p>
-                      </div>
+                      </div> */}
                     </div>
 
                    

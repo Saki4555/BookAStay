@@ -43,7 +43,7 @@ export default function ContactPage() {
           transition={{ duration: 10, ease: "easeOut" }}
         >
           <img
-            src="/assets/22.webp"
+            src="/assets/31.webp"
             alt="Zanzibar beach house"
             className="w-full h-full object-cover"
             loading="lazy"
@@ -52,10 +52,9 @@ export default function ContactPage() {
 
         {/* 2. Modern Gradient Overlay instead of Flat Color */}
         {/* This fades from dark (left) to transparent (right), improving text readability while keeping the image bright */}
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 via-secondary/5 to-transparent" />
 
-        {/* Optional: A subtle gradient from bottom for mobile readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent md:hidden" />
+        
 
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
           <div className="flex flex-col justify-center h-full max-w-3xl">
@@ -101,7 +100,7 @@ export default function ContactPage() {
               </motion.h1>
 
               {/* Description - Better Opacity Handling */}
-              <motion.p
+              {/* <motion.p
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
@@ -109,7 +108,7 @@ export default function ContactPage() {
                 className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl font-light"
               >
                 {contactData.hero.description}
-              </motion.p>
+              </motion.p> */}
             </motion.div>
           </div>
         </div>
@@ -147,10 +146,7 @@ export default function ContactPage() {
                       <p>{contactData.location.address.line1}</p>
                       <p>{contactData.location.address.line2}</p>
                     </div>
-                    <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-primary/80 font-medium flex items-center gap-2">
-                      <span className="block w-2 h-2 rounded-full bg-primary animate-pulse" />
-                      {contactData.location.note}
-                    </p>
+                   
                   </div>
 
                   {/* Map Integration - Full Width Visual */}

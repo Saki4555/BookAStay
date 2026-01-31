@@ -15,7 +15,7 @@ hero: {
       line1: "Direkt am Meer",
       line2: "Ostküste von Sansibar",
     },
-    note: "Google Maps-Standort folgt in Kürze – wir teilen den genauen Pin, sobald er bestätigt ist.",
+    
   },
   booking: {
     badge: "Wie buchen",

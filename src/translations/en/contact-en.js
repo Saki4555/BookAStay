@@ -15,7 +15,7 @@ export const CONTACT_TRANSLATIONS_EN = {
       line1: "Right by the sea",
       line2: "East Coast of Zanzibar",
     },
-    note: "Google Maps location coming soon – we'll share the exact pin once confirmed.",
+    
   },
   booking: {
     badge: "How to Book",
