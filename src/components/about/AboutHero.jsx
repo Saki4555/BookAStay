@@ -28,7 +28,7 @@ const AboutHero = () => {
       </motion.div>
 
       {/* 2. Sophisticated Gradient Mask */}
-      <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 via-secondary/5 to-transparent" />
       
       {/* 3. Content Container */}
       <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
@@ -69,13 +69,13 @@ const AboutHero = () => {
             </motion.h1>
 
             {/* Description */}
-            <motion.p 
+            {/* <motion.p 
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
               transition={{ duration: 0.8, ease: easeOutExpo }}
               className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl font-light"
             >
               {heroData.description}
-            </motion.p>
+            </motion.p> */}
           </motion.div>
         </div>
       </div>
