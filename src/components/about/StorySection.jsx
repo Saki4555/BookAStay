@@ -20,7 +20,6 @@ const StorySection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
           
           {/* LEFT COLUMN: Narrative */}
-          {/* FIX 1: Added lg:pt-32 to push text down, clearing space for the floating title */}
           <div className="lg:col-span-5 flex flex-col justify-center lg:pt-32 order-2 lg:order-1">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -42,14 +41,14 @@ const StorySection = () => {
               </h2>
 
               {/* Story Text */}
-              <div className="space-y-8 relative">
+              <div className="space-y-6 relative">
                 {/* Decorative side line */}
                 <div className="absolute -left-6 top-2 bottom-2 w-px bg-gradient-to-b from-primary/0 via-primary/40 to-primary/0 hidden md:block" />
 
                 {story.paragraphs && story.paragraphs.map((para, idx) => (
                   <p 
                     key={idx} 
-                    className={`text-base md:text-lg leading-relaxed text-muted-foreground ${idx === 0 ? "first-letter:text-5xl first-letter:font-serif first-letter:mr-3 first-letter:float-left first-letter:text-foreground" : ""}`}
+                    className="text-base md:text-lg leading-relaxed text-muted-foreground text-justify"
                   >
                     {para}
                   </p>
@@ -70,7 +69,6 @@ const StorySection = () => {
           <div className="lg:col-span-7 relative order-1 lg:order-2">
             
             {/* Desktop Header - Positioned Absolute */}
-            {/* FIX 2: Adjusted positioning to align with the whitespace created in the left column */}
             <motion.h2 
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -99,7 +97,6 @@ const StorySection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none" />
               
               {/* Floating "Stamp" Animation */}
-              {/* FIX 3: Moved to right-4 (inside the container) to prevent clipping */}
               <div className="absolute bottom-8 right-4 bg-background p-4 rounded-full shadow-xl animate-[spin_10s_linear_infinite]">
                  <svg viewBox="0 0 100 100" width="100" height="100" className="w-20 h-20 md:w-24 md:h-24">
                   <path id="curve" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent"/>

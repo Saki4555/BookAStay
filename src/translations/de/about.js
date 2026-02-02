@@ -17,15 +17,16 @@ hero: {
 
   // German
 story: {
-  badge: "Über das Haus",
-  header: "Euer Zuhause am Meer",
+  badge: "ÜBER DAS HAUS",
+  header: "Direkt am Meer",
   paragraphs: [
-    "Unser Haus liegt an der traumhaften Ostküste Sansibars, direkt am Meer, im kleinen und authentischen Fischerdorf Pwani Mchangani. Hier könnt ihr die Ruhe genießen, das echte Inselleben erleben und einfach abschalten.",
-    "Das Haus verfügt über zwei großzügige Schlafzimmer mit insgesamt drei King-Size-Betten sowie zwei Bäder. Die drei Meter hohen Decken verleihen allen Räumen eine angenehme Weite und sorgen für ein luftiges Wohlfühlerlebnis. Beim Bau des Hauses wurde ausschließlich mit lokalem Handwerk und regionalen Materialien gearbeitet. Die Möbel sind aus gebrauchtem Dhow-Holz gefertigt, das vor Ort liebevoll upgecycelt wurde.",
-    "Ein besonderes Highlight ist der große Swimmingpool mit wunderschönem Blick auf das Meer, der bei Groß und Klein gleichermaßen beliebt ist. Die große, gut ausgestattete Küche eignet sich perfekt zum Selberkochen, alternativ kann auf Wunsch auch eine Köchin organisiert werden.",
-    "Da wir in der Gegend mittlerweile sehr gut vernetzt sind, helfen wir euch gerne bei der Organisation von Ausflügen, Massagen oder Yoga-Sessions, damit ihr euren Aufenthalt entspannt und ganz nach euren Wünschen gestalten könnt.",
+    "Unser Haus liegt an der traumhaften Ostküste Sansibars, direkt am Meer, im kleinen und authentischen Fischerdorf Pwani Mchangani. Hier könnt ihr die Ruhe genießen, das echte Inselleben erleben und einfach abschalten. Die Gegend ist angenehm ruhig, bietet aber dennoch genügend Möglichkeiten, gut essen zu gehen – vor allem lokal als auch italienisch.",
+    "Das Haus verfügt über zwei großzügige Schlafzimmer mit insgesamt drei King-Size-Betten sowie zwei Bäder. Die drei Meter hohen Decken verleihen allen Räumen eine angenehme Weite und sorgen für ein luftiges Wohlfühlerlebnis. Beim Bau des Hauses wurde ausschließlich mit lokalem Handwerk und regionalen Materialien gearbeitet. Die Möbel sind aus gebrauchtem Dhow-Holz gefertigt, das vor Ort liebevoll upgecycelt wurde. Die große, gut ausgestattte Küche eignet sich perfekt zum Selberkochen, alternativ kann auf Wunsch auch eine Köchin organisiert werden. Eine Waschmaschine ist ebenfalls vorhanden.",
+    "Ein besonderes Highlight ist der große Swimmingpool mit wunderschönem Blick auf das Meer, der bei Groß und Klein gleichermaßen beliebt ist.",
+    "Alle Räume sind mit Klimaanlage ausgestattet (bei Stromausfällen kann diese leider nicht genutzt werden).",
+    "Da wir in der Gegend mittlerweile sehr gut vernetzt sind, helfen wir euch gerne bei der Organisation von Ausflügen, Massagen oder Yoga-Sessions, damit ihr euren Aufenthalt entspannt und ganz nach euren Wünschen gestalten könnt."
   ],
-  cta: "Aufenthalt buchen",
+  cta: "Jetzt Buchen"
 },
  values: {
   header: "Was unser Zuhause besonders macht",

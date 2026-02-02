@@ -18,15 +18,16 @@ hero: {
 
  // English
 story: {
-  badge: "About the House",
-  header: "Your Home by the Sea",
+  badge: "ABOUT THE HOUSE",
+  header: "Right by the Sea",
   paragraphs: [
-    "Our house is located on the stunning east coast of Zanzibar, right by the sea, in the small and authentic fishing village of Pwani Mchangani. Here you can enjoy peace and quiet, experience the real island life, and simply unwind.",
-    "The house features two spacious bedrooms with a total of three king-size beds and two bathrooms. The three-meter-high ceilings give all rooms a sense of openness and create a light, airy, and relaxing atmosphere. The house was built using local craftsmanship and materials, and the furniture is made from reclaimed Dhow wood, lovingly upcycled on site.",
-    "A special highlight is the large swimming pool with beautiful sea views, perfect for both adults and children to relax and enjoy. The large, fully equipped kitchen is perfect for cooking for yourself, or a cook can be arranged on request.",
-    "Having established strong local connections, we are happy to assist with organizing excursions, massages, or yoga sessions, making sure your stay is as relaxing and enjoyable as possible.",
+    "Our house is located on the stunning east coast of Zanzibar, right by the sea, in the small and authentic fishing village of Pwani Mchangani. Here you can enjoy peace and quiet, experience the real island life, and simply unwind. The area is pleasantly calm, yet there are plenty of options nearby for dining – both local and Italian cuisine.",
+    "The house features two spacious bedrooms with a total of three king-size beds and two bathrooms. The three-meter-high ceilings give all rooms a sense of openness and create a light, airy, and relaxing atmosphere. The house was built using local craftsmanship and materials, and the furniture is made from reclaimed Dhow wood, lovingly upcycled on site. The large, fully equipped kitchen is perfect for cooking for yourself, or a cook can be arranged on request. A washing machine is also available.",
+    "A special highlight is the large swimming pool with beautiful sea views, perfect for both adults and children to relax and enjoy.",
+    "All rooms are equipped with air conditioning (please note it is not usable during power outages).",
+    "Having established strong local connections, we are happy to assist with organizing excursions, massages, or yoga sessions, making sure your stay is as relaxing and enjoyable as possible."
   ],
-  cta: "Book Your Stay",
+  cta: "Book Your Stay"
 },
   values: {
   header: "What Makes Our Home Special",

@@ -33,21 +33,19 @@ export const HOME_TRANSLATIONS_DE = {
 
  
 introduction: {
-  title: "Einführung",
-  paragraphs: [
-    "Wir leben seit 2021 abwechselnd hier und können uns immer noch nicht an der Ruhe und Gelassenheit sattsehen.",
-    "Mit den Gezeiten in einem kleinen Fischerdorf an der Küste Afrikas zu leben, ist etwas zutiefst Demütigendes und Schönes.",
-    "Schon in den ersten Tagen vergisst man, welcher Wochentag ist, Zeit verliert an Bedeutung, und das Einzige, was zählt, ist der Moment – der Wind, der durch die Palmen streicht, das sanfte Rauschen der Wellen auf dem weißen Sand…",
-    "Unser Haus spiegelt unseren vielfältigen Hintergrund wider: Deutsch, Schweizerisch, Kroatisch und Zanzibari fließen in Architektur, Einrichtung und Mentalität ein. Jeder Winkel wurde mit Aufmerksamkeit gestaltet, um ein Wohlfühlerlebnis für unsere Gäste zu schaffen.",
-    "Egal ob Fragen, Tipps für Ausflüge, Massagen oder Yoga-Sessions – wir sind jederzeit für euch da, um euren Aufenthalt so entspannt, persönlich und unvergesslich wie möglich zu gestalten.",
-    {
-      beforeLink: "Für weitere Einblicke in unseren Alltag folgt uns gerne auf ",
-      linkText: "Instagram",
-      linkUrl: "https://www.instagram.com/windsofzanzibar/",
-      afterLink: " oder schreibt uns direkt an.",
+      "title": "Einführung",
+      "paragraphs": [
+        "Wir leben seit 2021 abwechselnd hier und können uns immer noch nicht an der Ruhe und Gelassenheit sattsehen. Mit den Gezeiten in einem kleinen Fischerdorf an der Küste Afrikas zu leben, ist etwas zutiefst Demütigendes und Schönes. Schon in den ersten Tagen vergisst man, welcher Wochentag ist, Zeit verliert an Bedeutung, und das Einzige, was zählt, ist der Moment – der Wind, der durch die Palmen streicht, das sanfte Rauschen der Wellen auf dem weißen Sand…",
+        "Unser Haus spiegelt unseren vielfältigen Hintergrund wider: Deutsch, Schweizerisch, Kroatisch und Zanzibari fließen in Architektur, Einrichtung und Mentalität ein. Jeder Winkel wurde mit Aufmerksamkeit gestaltet, um ein Wohlfühlerlebnis für unsere Gäste zu schaffen.",
+        "Egal ob Fragen, Tipps für Ausflüge, Massagen oder Yoga-Sessions – wir sind jederzeit für euch da, um euren Aufenthalt so entspannt, persönlich und unvergesslich wie möglich zu gestalten.",
+        {
+          "beforeLink": "Für weitere Einblicke in unseren Alltag folgt uns gerne auf ",
+          "linkText": "Instagram",
+          "linkUrl": "https://www.instagram.com/windsofzanzibar/",
+          "afterLink": " oder schreibt uns direkt an."
+        }
+      ]
     },
-  ],
-},
 
   // ------------------------------
 

@@ -19,7 +19,7 @@ const IntroductionSection = () => {
   const y2 = useTransform(scrollYProgress, [0, 1], [-100, 100]);
 
   const title = t("home.introduction.title");
- const paragraphs = t("home.introduction.paragraphs");
+  const paragraphs = t("home.introduction.paragraphs");
 
   const imageVariants = {
     hidden: { 
@@ -67,7 +67,7 @@ const IntroductionSection = () => {
                   <motion.p 
                     key={index}
                     variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-                    className="text-slate-600 text-base md:text-lg leading-relaxed mb-6 last:mb-0"
+                    className="text-slate-600 text-base md:text-lg leading-relaxed mb-6 last:mb-0 text-justify"
                   >
                     {para}
                   </motion.p>
@@ -77,7 +77,7 @@ const IntroductionSection = () => {
                   <motion.p 
                     key={index}
                     variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-                    className="text-slate-600 text-base md:text-lg leading-relaxed mb-6 last:mb-0"
+                    className="text-slate-600 text-base md:text-lg leading-relaxed mb-6 last:mb-0 text-justify"
                   >
                     {para.beforeLink}
                     <a 

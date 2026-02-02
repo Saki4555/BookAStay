@@ -33,21 +33,19 @@ export const HOME_TRANSLATIONS_EN = {
 
   
  introduction: {
-  title: "Introduction",
-  paragraphs: [
-    "We have lived here on and off since 2021, and we never tire of the serenity and peace.",
-    "Living with the tides in a small fishing village off the coast of Africa is profoundly humbling.",
-    "Within the first days, you forget what day of the week it is, time loses meaning, and very little matters more than being fully in the moment – the wind rustling through the palm trees, the waves gently crashing on the white sand…",
-    "Our house reflects our diverse background – German, Swiss, Croatian, and Zanzibari – woven into its architecture, design, and spirit. Every corner has been crafted with care to create a feel-good experience for our guests.",
-    "Whether you have questions, want advice on excursions, massages, or yoga sessions, we are always here to make your stay as relaxed, personal, and unforgettable as possible.",
-    {
-      beforeLink: "For more insights into our daily life, feel free to follow us on ",
-      linkText: "Instagram",
-      linkUrl: "https://www.instagram.com/windsofzanzibar/",
-      afterLink: " or contact us directly.",
+      "title": "Introduction",
+      "paragraphs": [
+        "We have lived here on and off since 2021, and we never tire of the serenity and peace. Living with the tides in a small fishing village off the coast of Africa is profoundly humbling. Within the first days, you forget what day of the week it is, time loses meaning, and very little matters more than being fully in the moment – the wind rustling through the palm trees, the waves gently crashing on the white sand…",
+        "Our house reflects our diverse background – German, Swiss, Croatian, and Zanzibari – woven into its architecture, design, and spirit. Every corner has been crafted with care to create a feel-good experience for our guests.",
+        "Whether you have questions, want advice on excursions, massages, or yoga sessions, we are always here to make your stay as relaxed, personal, and unforgettable as possible.",
+        {
+          "beforeLink": "For more insights into our daily life, feel free to follow us on ",
+          "linkText": "Instagram",
+          "linkUrl": "https://www.instagram.com/windsofzanzibar/",
+          "afterLink": " or contact us directly."
+        }
+      ]
     },
-  ],
-},
 
   // ------------------------------
 

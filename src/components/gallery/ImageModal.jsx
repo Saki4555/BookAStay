@@ -116,12 +116,12 @@ const ImageModal = ({
         </div>
 
         {/* Caption */}
-        <div className="px-4 py-3 flex-shrink-0">
+        {/* <div className="px-4 py-3 flex-shrink-0">
           <h3 className="text-lg font-semibold">{image.title}</h3>
           {image.caption && (
             <p className="mt-1 text-sm text-gray-600">{image.caption}</p>
           )}
-        </div>
+        </div> */}
 
         {/* Thumbnails */}
         <div className="flex items-center justify-center gap-2 overflow-x-auto border-t border-gray-100 px-4 py-3 flex-shrink-0">

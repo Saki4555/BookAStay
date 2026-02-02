@@ -7,10 +7,11 @@ export const GALLERY_TRANSLATIONS_DE = {
 },
 
   images: {
-    beachfront_purity: {
-      title: "Reinheit am Strand",
-      caption: "Treten Sie direkt auf den weichen weißen Sand von Pwani Mchangani, wo der Ozean zu Ihrem Vorgarten wird.",
+     sunset_serenade: {
+      title: "Goldene Stunde",
+      caption: "Wenn die Sonne untergeht, wird das Haus in ein warmes, goldenes Licht getaucht – Zeit für Ruhe und Reflexion.",
     },
+    
     morning_glow: {
       title: "Morgenglanz",
       caption: "Erleben Sie die Magie des Sonnenaufgangs, wenn das erste Licht den Indischen Ozean in sanfte Farben taucht.",
@@ -47,22 +48,13 @@ export const GALLERY_TRANSLATIONS_DE = {
       title: "Lokale Traditionen",
       caption: "Beobachten Sie die traditionellen Dhows, ein Zeugnis der beständigen Fischerkultur des Dorfes.",
     },
-    sunset_serenade: {
-      title: "Goldene Stunde",
-      caption: "Wenn die Sonne untergeht, wird das Haus in ein warmes, goldenes Licht getaucht – Zeit für Ruhe und Reflexion.",
-    },
+   
     lounge_comfort: {
       title: "Eleganter Komfort",
       caption: "Gemütliche Sitzbereiche im ganzen Haus laden dazu ein, mit einem Buch zu entspannen oder die Aussicht zu genießen.",
     },
-    carved_doorways: {
-      title: "Filigrane Details",
-      caption: "Wunderschön geschnitzte Holztüren erzählen Geschichten von lokalem Handwerk und der reichen Geschichte Sansibars.",
-    },
-    turquoise_tides: {
-      title: "Rhythmus der Gezeiten",
-      caption: "Die wechselnden Gezeiten verwandeln die Landschaft alle paar Stunden und enthüllen neue Wunder am Ufer.",
-    },
+    
+   
     starlit_evenings: {
       title: "Sternenklare Nächte",
       caption: "Dank minimaler Lichtverschmutzung wird der Nachthimmel über dem Ozean zu einem atemberaubenden Sternenzelt.",
@@ -82,16 +74,8 @@ export const GALLERY_TRANSLATIONS_DE = {
       caption:
         "Mit den Gezeiten in einem kleinen Fischerdorf zu leben, ist etwas zutiefst Demütigendes, in dem das Einzige, was zählt, der Moment ist.",
     },
-    serene_shores: {
-      title: "Ruhe und Gelassenheit",
-      caption:
-        "Unser Haus liegt an der traumhaften Ostküste Sansibars, direkt am Meer, wo ihr die Ruhe genießen und einfach abschalten könnt.",
-    },
-    beach_coastline: {
-      title: "Traumhafte Ostküste",
-      caption:
-        "Unser Haus liegt direkt am Meer im authentischen Fischerdorf Pwani Mchangani. Hier könnt ihr das echte Inselleben erleben und einfach abschalten.",
-    },
+   
+   
     tidal_living: {
       title: "Demütigende Erfahrungen",
       caption:
@@ -112,11 +96,7 @@ export const GALLERY_TRANSLATIONS_DE = {
       caption:
         "Die große, gut ausgestattete Küche eignet sich perfekt zum Selberkochen, alternativ kann auf Wunsch auch eine Köchin organisiert werden.",
     },
-    poolside_relaxation: {
-      title: "Eine tropische Oase",
-      caption:
-        "Jeder Winkel wurde mit Aufmerksamkeit gestaltet, um ein Wohlfühlerlebnis für unsere Gäste zu schaffen, während der Wind durch die Palmen streicht und zum Verweilen am Pool einlädt.",
-    },
+   
     authentic_craft: {
       title: "Lokales Handwerk",
       caption:
@@ -132,11 +112,7 @@ export const GALLERY_TRANSLATIONS_DE = {
       caption:
         "Das Haus verfügt über eine große, voll ausgestattete Küche. Auf Wunsch kann eine Köchin organisiert werden, die lokale Köstlichkeiten zubereitet und euren Aufenthalt noch angenehmer macht.",
     },
-    poolside_panorama: {
-      title: "Eine tropische Oase",
-      caption:
-        "Während der Wind sanft durch die Palmen streicht, lädt der Pool zum Verweilen ein und schafft in jedem Winkel unseres Zuhauses ein echtes Wohlfühlerlebnis.",
-    },
+ 
     artisanal_decor: {
       title: "Handgefertigtes Erbe",
       caption:

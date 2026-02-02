@@ -40,11 +40,11 @@ const ImageGallery = () => {
             </div>
 
             {/* Title section */}
-            <div className="p-3 sm:p-4 bg-card">
+            {/* <div className="p-3 sm:p-4 bg-card">
               <h3 className="text-base sm:text-lg font-medium text-secondary group-hover:text-primary transition-colors duration-300">
                 {image.title}
               </h3>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

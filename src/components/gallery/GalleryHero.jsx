@@ -15,13 +15,13 @@ const GalleryHero = () => {
     <section className="relative h-[45vh] sm:h-[50vh] md:h-[55vh] w-full overflow-hidden">
       {/* Background Image with Cinematic Zoom */}
       <motion.div 
-        className="absolute inset-0"
+        className="absolute inset-0 "
         initial={{ scale: 1.15 }}
         animate={{ scale: 1 }}
         transition={{ duration: 12, ease: "easeOut" }}
       >
         <img
-          src="/assets/21.webp"
+          src="/assets/11.webp"
           alt="House in Pwani Mchangani"
           className="w-full h-full object-cover"
         />
@@ -52,25 +52,25 @@ const GalleryHero = () => {
             }}
           >
             {/* Badge Section */}
-            <motion.div 
+            {/* <motion.div 
               variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } }}
               transition={{ duration: 0.8, ease: easeOutExpo }}
-              className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6"
+              className="flex items-center gap-2  sm:gap-3 mb-4 sm:mb-5 md:mb-6"
             >
               <span className="h-[2px] w-8 sm:w-10 md:w-12 bg-primary" />
               <span className="text-primary text-[10px] sm:text-xs md:text-sm font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase">
                 {heroData.badge}
               </span>
-            </motion.div>
+            </motion.div> */}
 
             {/* Title: Refined Tracking and Weight */}
-            <motion.h1 
+            {/* <motion.h1 
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
               transition={{ duration: 0.8, ease: easeOutExpo }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-5 md:mb-6 leading-[1.1] tracking-tighter"
             >
               {heroData.title}
-            </motion.h1>
+            </motion.h1> */}
 
             {/* Description: High Readability */}
             {/* <motion.p 
