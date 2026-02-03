@@ -72,9 +72,9 @@ export default function VillaHeroCarousel() {
               {/* 3. CONTENT LAYER */}
               <div className="absolute inset-0 flex flex-col items-center justify-center px-6 sm:px-12 lg:px-20 max-w-[1400px] mx-auto">
                 <div className="max-w-3xl space-y-4 sm:space-y-6">
-                   <TextRoll className="text-3xl italic sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-wide text-white">
-  Winds of Zanzibar
-</TextRoll>
+                  <TextRoll className="text-3xl italic sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-wide text-white">
+                    Winds of Zanzibar
+                  </TextRoll>
                   {/* Decorative Line (Your Primary Color) */}
                   {/* <div className={`h-1 w-16 bg-primary mb-4 sm:mb-6 transition-all duration-1000 ${index === current - 1 ? 'w-24 opacity-100' : 'w-0 opacity-0'}`} /> */}
 
@@ -98,8 +98,6 @@ export default function VillaHeroCarousel() {
                         {slide.subtitle}
                      </p>
                   )} */}
-
-                 
                 </div>
               </div>
             </CarouselItem>

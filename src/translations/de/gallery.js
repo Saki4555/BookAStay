@@ -128,5 +128,25 @@ export const GALLERY_TRANSLATIONS_DE = {
       caption:
         "Das Schlafzimmer unterstreicht unsere Liebe zum Upcycling mit einem Bett und einem einzigartigen Schrank aus gebrauchtem Dhow-Holz, alles unter luftigen, drei Meter hohen Decken.",
     },
+    new_one: {
+      title: "no need",
+      caption: "no need"
+    },
+    new_two: {
+      title: "no need",
+      caption: "no need"
+    },
+    new_three: {
+      title: "no need",
+      caption: "no need"
+    },
+    new_four: {
+      title: "no need",
+      caption: "no need"
+    },
+    new_five: {
+      title: "no need",
+      caption: "no need"
+    },
   },
 };

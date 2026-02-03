@@ -128,5 +128,26 @@ hero: {
       caption:
         "The bedroom showcases our commitment to upcycling, featuring a bed and unique wardrobe made from reclaimed Dhow wood, all set beneath airy three-meter-high ceilings.",
     },
+    new_one: {
+      title: "no need",
+      caption: "no need"
+    },
+    new_two: {
+      title: "no need",
+      caption: "no need"
+    },
+    new_three: {
+      title: "no need",
+      caption: "no need"
+    },
+    new_four: {
+      title: "no need",
+      caption: "no need"
+    },
+    new_five: {
+      title: "no need",
+      caption: "no need"
+    },
+    
   },
 };

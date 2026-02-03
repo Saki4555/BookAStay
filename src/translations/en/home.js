@@ -12,7 +12,7 @@ export const HOME_TRANSLATIONS_EN = {
     slides: [
       {
         title: "Finest holiday villa rental collection",
-        image: "/assets/19.webp",
+        image: "/assets/37.webp",
         alt: "Luxury villa with ocean view",
         cta: "FIND YOUR VILLA",
       },
